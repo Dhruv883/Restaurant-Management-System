@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@100;200;300;400;500&display=swap");
+
+body {
+  background-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  height: 80px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+}
+
+.content {
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 75px;
+}
+
+.logsign button {
+  border: solid;
+  border-color: white;
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.title {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.name {
+  font-size: 30px;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-left: 20px;
+  font-family: "Figtree", sans-serif;
+  font-weight: bolder;
+}
+
+.title input[type="text"] {
+  float: right;
+  padding: 6px;
+  border: none;
+
+  font-size: 20px;
+}
+
+.searchbar img {
+  width: 27px;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+hr {
+  color: rgb(213, 213, 213);
+  width: 80%;
+}
