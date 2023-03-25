@@ -55,3 +55,14 @@ nav {
 .content p {
   font-size: 1.5rem;
 }
+
+.content button a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  background: var(--sky-blue);
+  padding: 10px;
+  border-radius: 15px;
+  width: fit-content;
+}
