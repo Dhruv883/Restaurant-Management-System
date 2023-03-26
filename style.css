@@ -1,7 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600&family=Forum&family=Lato:wght@300;400&family=Montserrat:wght@200;300;400&display=swap");
+
+:root {
+  --darkGrey: #45494c;
+  --red: #c21010;
+  --light-yellow: #e4c590;
+  --light-orange: #eeb77f;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
 }
 
 .logo img {
@@ -27,16 +40,16 @@ nav {
 }
 
 .home {
-  border: 2px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 1rem;
+  padding: 1.5em;
 }
 
 .img img {
-  width: 55vw;
+  width: 45vw;
+  border-radius: 1em;
 }
 
 .content {
@@ -45,24 +58,160 @@ nav {
   justify-content: center;
   align-items: start;
   gap: 1rem;
+  color: var(--light-yellow);
 }
 
 .content h2 {
   padding: 4px;
-  font-size: 3.5rem;
+  font-size: 3.75rem;
+  font-weight: 600;
+  /* color: black; */
+  font-family: "Forum", cursive;
 }
 
 .content p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.content button {
+  border: none;
+  font-size: 1.25em;
+  padding: 0.7em 1em;
+  border-radius: 5px;
+  background-color: var(--light-yellow);
+}
+
+.content button:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
 }
 
 .content button a {
   text-decoration: none;
   color: white;
-  font-size: 1.25rem;
-  font-family: "Montserrat", sans-serif;
-  background: var(--sky-blue);
+}
+
+/* BOOKING SECTION */
+
+.booking {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.bookingImg {
+  height: 100vh;
+  width: 50vw;
+}
+
+.bookingImg img {
+  height: 100vh;
+  width: 50vw;
+}
+
+.bookingForm {
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  color: white;
+  gap: 1.25em;
+}
+
+.bookingForm div {
+  /* border: 2px solid red; */
+  padding: 0 2em;
+}
+
+.booking .title {
+  font-size: 3em;
+  font-family: "Forum", cursive;
+  font-weight: 500;
+  padding: 0.5em;
+}
+
+.input input {
+  border: none;
+  outline: none;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
   padding: 10px;
-  border-radius: 15px;
-  width: fit-content;
+  width: 30vw;
+  font-size: 1em;
+}
+
+input[type="date"] {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+.input input::placeholder {
+  color: white;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+}
+
+.input input:focus {
+  border: 1px solid var(--light-yellow);
+}
+
+textarea {
+  border: none;
+  outline: none;
+  width: 30vw;
+  height: 20vh;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
+  padding: 10px;
+  font-size: 1em;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: white;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+}
+
+.input select {
+  border: none;
+  outline: none;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
+  padding: 10px;
+  width: 30vw;
+  font-size: 1em;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  overflow: scroll;
+  cursor: pointer;
+}
+
+.input select option {
+  font-size: 1em;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.bookbtn button {
+  border: none;
+  font-size: 1.25em;
+  padding: 0.5em;
+  width: 30vw;
+  cursor: pointer;
+  font-family: "Figtree", sans-serif;
+  background-color: var(--light-yellow);
+}
+
+.people div:nth-child(2) {
+  display: flex;
 }
