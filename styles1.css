@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?famil=Baloo+2&family=Potta+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Calibri";
+}
+
+body {
+  background-color: #e8f3e8;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 18rem;
+  padding: 40px 47px;
+  box-shadow: 10px 10px 18px -8px #aaaaaa, -10px -10px 24px #ffffff;
+  border-radius: 20px;
+  height: 600px;
+  width: 800px;
+}
+
+.container img {
+  height: 100%;
+  width: auto;
+  border-radius: 20px;
+}
+
+.about_details {
+  margin: 0 45px;
+}
+
+.about_details span {
+  color: navy;
+  font-size: 20px;
+}
+
+.about_details h2 {
+  font-family: "Georgia";
+  font-weight: 100;
+  font-size: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.about_details p {
+  color: gray;
+  font-size: 15px;
+}
