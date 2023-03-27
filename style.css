@@ -15,6 +15,8 @@
 
 body {
   font-family: "Figtree", sans-serif;
+  background-color: black;
+  overflow-x: hidden !important;
 }
 
 .logo img {
@@ -25,8 +27,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: black;
-  color: white; */
+  /* background: black; */
+  color: white;
   padding: 10px;
   cursor: pointer;
   position: sticky;
@@ -45,6 +47,7 @@ nav {
   justify-content: center;
   gap: 2rem;
   padding: 1.5em;
+  background: black;
 }
 
 .img img {
@@ -92,12 +95,169 @@ nav {
   color: white;
 }
 
-/* BOOKING SECTION */
+/* -------------------------ABOUT US------------------------------------ */
+
+.aboutUs {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: black;
+  padding: 1em 0;
+}
+
+.aboutImg {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutUs img {
+  height: 600px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.about_details {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  height: 100vh;
+  gap: 2em;
+}
+
+.about_details span {
+  font-family: "Forum", cursive;
+  color: var(--light-yellow);
+  font-size: 3em;
+}
+
+.about_details h2 {
+  font-family: "Forum", cursive;
+  font-weight: 100;
+  font-size: 4em;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.about_details p {
+  color: white;
+  font-size: 1.1em;
+}
+
+/*  ----------------------------------CONTACT US---------------------------------- */
+
+.contactUs {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: black;
+  padding: 1em 0;
+}
+
+.contactImg {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactUs img {
+  height: 600px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.contact_details {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  height: 100vh;
+  gap: 2em;
+  color: white;
+}
+
+.contactTitle {
+  font-family: "Forum", cursive;
+  font-weight: 100;
+  font-size: 4em;
+  color: var(--light-yellow);
+  letter-spacing: 1px;
+}
+
+.contact_details h3 {
+  padding: 0.5em;
+  font-weight: 400;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.contact_details p {
+  padding: 0.25em 0.5em;
+  font-size: 1.25em;
+  color: #a6a6a6;
+  text-align: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  gap: 1.25em;
+}
+
+.form-group input {
+  border: none;
+  outline: none;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
+  padding: 10px;
+  width: 30vw;
+  font-size: 1em;
+}
+
+.form-group input::placeholder {
+  color: white;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+}
+
+.form-group input:focus {
+  border: 1px solid var(--light-yellow);
+}
+
+.contactBtn {
+  border: none;
+  font-size: 1.25em;
+  padding: 0.5em;
+  width: 30vw;
+  cursor: pointer;
+  font-family: "Figtree", sans-serif;
+  background-color: var(--light-yellow);
+}
+
+/* -----------------------BOOKING SECTION ------------------------*/
 
 .booking {
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
+  padding: 2em 0;
+  /* overflow: hidden; */
 }
 
 .bookingImg {
@@ -131,6 +291,7 @@ nav {
   font-family: "Forum", cursive;
   font-weight: 500;
   padding: 0.5em;
+  color: var(--light-yellow);
 }
 
 .input input {
@@ -200,6 +361,7 @@ textarea::placeholder {
   font-family: "Figtree", sans-serif;
   font-weight: 100;
   cursor: pointer;
+  overflow: scroll;
 }
 
 .bookbtn button {
@@ -212,6 +374,183 @@ textarea::placeholder {
   background-color: var(--light-yellow);
 }
 
-.people div:nth-child(2) {
-  display: flex;
+/*  ----------------------------------MEDIA QUERIES---------------------------------- */
+
+@media (max-width: 320px) {
 }
+
+@media (max-width: 375px) {
+  .booking .title {
+    font-size: 2em !important;
+    padding: 0.5em 0.5em 0 0.5em;
+  }
+  .content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .content p {
+    font-size: 1.15rem;
+  }
+
+  .home {
+    padding: 0.75em;
+  }
+}
+@media (max-width: 425px) {
+  .bookingForm {
+    width: 100vw;
+  }
+
+  .input input {
+    padding: 10px;
+    width: 80vw;
+    font-size: 1em;
+  }
+
+  textarea {
+    width: 80vw;
+    height: 20vh;
+    font-size: 1em;
+  }
+
+  .input select {
+    width: 80vw;
+    font-size: 1em;
+  }
+
+  .booking .title {
+    font-size: 2.5em;
+    padding: 0.5em 0.5em 0 0.5em;
+  }
+  .bookbtn button {
+    font-size: 1em;
+    padding: 0.5em 0.25em;
+    width: 80vw;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .bookingImg {
+    display: none;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+/* ------------------------ */
+
+/* -------------------------------------------- */
+
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 18rem;
+  padding: 25px 47px;
+  border-radius: 20px;
+  height: 600px;
+  width: 800px;
+}
+
+.container2 img {
+  height: 100%;
+  width: auto;
+  border-radius: 20px;
+}
+
+.about_details2 {
+  margin: 0px 30px;
+}
+
+.about_details2 span {
+  color: navy;
+  font-size: 20px;
+}
+
+.about_details2 h2 {
+  font-family: "Georgia";
+  font-weight: 100;
+  font-size: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.about_details2 h3 {
+  font-size: 20px;
+}
+
+.about_details2 p {
+  font-family: "Georgia";
+  color: gray;
+  font-size: 15px;
+}
+
+.contact span {
+  color: navy;
+  font-size: 20px;
+}
+
+/* form {
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin: 50px auto;
+  background-color: transparent;
+  padding: 0px;
+  margin-right: 30px;
+} */
+
+/* .form-group {
+  margin-bottom: 5px;
+} */
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+/* input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  font-size: 18px;
+  color: black;
+  transition: border-bottom-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  outline: none;
+  border-bottom-color: navy;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background-color: navy;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  left: 50%;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: green;
+} */
