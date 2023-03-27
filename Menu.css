@@ -32,12 +32,22 @@ nav {
   font-size: 16px;
 }
 
-.content {
-  color: var(--light-yellow);
+.navContent {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.navContent a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+  padding: 0 0 0 2px;
+}
+
+.navContent a:hover {
+  border-bottom: 2px solid var(--light-yellow);
 }
 
 .logo img {
@@ -45,11 +55,9 @@ nav {
 }
 
 .logsign button {
-  color: var(--light-yellow);
   border: solid;
   border-color: var(--light-yellow);
   background-color: transparent;
-
   padding: 10px 20px;
   cursor: pointer;
   font-weight: 200;
@@ -57,6 +65,17 @@ nav {
   text-align: center;
   border-radius: 10px;
   transition: 0.1s;
+}
+
+.logsign button a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+}
+
+.logsign button:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
 }
 
 .title {

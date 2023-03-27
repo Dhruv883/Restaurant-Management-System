@@ -19,19 +19,62 @@ body {
   overflow-x: hidden !important;
 }
 
-.logo img {
-  width: 100px;
+nav {
+  height: 80px;
+
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
 }
 
-nav {
+.navContent {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  /* background: black; */
-  color: white;
-  padding: 10px;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navContent a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+  padding: 0 0 0 2px;
+}
+
+.navContent a:hover {
+  border-bottom: 2px solid var(--light-yellow);
+}
+
+.logo img {
+  width: 150px;
+}
+
+.logsign button {
+  border: solid;
+  border-color: var(--light-yellow);
+  background-color: transparent;
+  padding: 10px 20px;
   cursor: pointer;
-  position: sticky;
+  font-weight: 200;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.logsign button a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+}
+
+.logsign button:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
 }
 
 .menu {
@@ -256,7 +299,7 @@ nav {
 .booking {
   display: flex;
   justify-content: space-between;
-  padding: 2em 0;
+  padding: 2em;
   /* overflow: hidden; */
 }
 
