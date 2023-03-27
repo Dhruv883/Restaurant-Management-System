@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@100;200;300;400;500&display=swap");
 
+:root {
+  --orange: #f99638;
+  --red: #c21010;
+  --beige: #f8f8f8;
+  --grey: #6f7376;
+  --light-grey: #e3e6e7;
+  --light-yellow: #e4c590;
+}
+
 body {
   background-color: #ffffff;
 }
@@ -13,6 +22,7 @@ body {
 
 nav {
   height: 80px;
+
   background-color: black;
   display: flex;
   align-items: center;
@@ -23,8 +33,7 @@ nav {
 }
 
 .content {
-  color: white;
-
+  color: var(--light-yellow);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,14 +41,15 @@ nav {
 }
 
 .logo img {
-  width: 75px;
+  width: 150px;
 }
 
 .logsign button {
+  color: var(--light-yellow);
   border: solid;
-  border-color: white;
+  border-color: var(--light-yellow);
   background-color: transparent;
-  color: white;
+
   padding: 10px 20px;
   cursor: pointer;
   font-weight: 200;
@@ -79,7 +89,7 @@ nav {
 }
 
 .searchbar img {
-  width: 27px;
+  width: 20px;
 }
 
 .searchbar {
