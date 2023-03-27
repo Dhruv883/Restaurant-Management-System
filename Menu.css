@@ -43,7 +43,7 @@ nav {
   text-decoration: none;
   color: var(--light-yellow);
   font-size: 1.25em;
-  padding: 0 0 0 2px;
+  padding: 0 0 2px 0;
 }
 
 .navContent a:hover {
