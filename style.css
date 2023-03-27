@@ -16,7 +16,7 @@
 body {
   font-family: "Figtree", sans-serif;
   background-color: black;
-  overflow-x: hidden !important;
+  /* overflow-x: hidden !important; */
 }
 
 nav {
@@ -319,6 +319,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: black;
   color: white;
   gap: 1.25em;
@@ -420,32 +421,22 @@ textarea::placeholder {
 /*  ----------------------------------MEDIA QUERIES---------------------------------- */
 
 @media (max-width: 320px) {
-}
-
-@media (max-width: 375px) {
-  .booking .title {
-    font-size: 2em !important;
-    padding: 0.5em 0.5em 0 0.5em;
-  }
-  .content h2 {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-
-  .content p {
-    font-size: 1.15rem;
-  }
-
   .home {
-    padding: 0.75em;
-  }
-}
-@media (max-width: 425px) {
-  .bookingForm {
-    width: 100vw;
+    padding: 0.75em 0em !important;
+    gap: 1rem;
   }
 
   .input input {
+    padding: 10px;
+    width: 80vw;
+    font-size: 1em;
+  }
+
+  .about_details {
+    gap: 1em;
+  }
+
+  .form-group input {
     padding: 10px;
     width: 80vw;
     font-size: 1em;
@@ -461,24 +452,159 @@ textarea::placeholder {
     width: 80vw;
     font-size: 1em;
   }
+}
+
+@media (max-width: 375px) {
+  .aboutUs span {
+    font-size: 3em;
+    padding: 0;
+  }
+
+  .about_details p {
+    font-size: 1rem;
+  }
+
+  .about_details h2 {
+    font-size: 2em;
+  }
 
   .booking .title {
-    font-size: 2.5em;
+    font-size: 2em !important;
     padding: 0.5em 0.5em 0 0.5em;
   }
+
+  .content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .content p {
+    font-size: 1.15rem;
+  }
+
+  .home {
+    padding: 0.75em;
+  }
+}
+
+@media (max-width: 426px) {
+  .bookingForm {
+    width: 100vw;
+  }
+
+  .about_details h2 {
+    font-size: 2em;
+  }
+
+  .input input {
+    padding: 10px;
+    width: 80vw !important;
+    font-size: 1em;
+  }
+
+  .form-group input {
+    padding: 10px;
+    width: 80vw !important;
+    font-size: 1em;
+  }
+
+  textarea {
+    width: 80vw !important;
+    height: 20vh;
+    font-size: 1em;
+  }
+
+  .input select {
+    width: 80vw !important;
+    font-size: 1em;
+  }
+
+  .contactTitle {
+    font-size: 3em;
+  }
+
+  .booking .title {
+    font-size: 3em;
+    padding: 0.5em 2em;
+  }
+
   .bookbtn button {
     font-size: 1em;
     padding: 0.5em 0.25em;
-    width: 80vw;
+    width: 80vw !important;
+  }
+
+  .contactBtn {
+    font-size: 1em;
+    padding: 0.5em 0.25em;
+    width: 80vw !important;
   }
 }
 
 @media (max-width: 768px) {
+  .home {
+    padding: 1.5em 0em;
+  }
+
+  .about_details span {
+    font-size: 4em;
+  }
+
+  .bookingForm {
+    padding-top: 2.25em;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .input input {
+    width: 60vw;
+  }
+
+  .bookbtn button {
+    width: 60vw;
+  }
+
+  .contactBtn {
+    width: 60vw;
+  }
+
+  textarea {
+    width: 60vw;
+  }
+
+  .form-group input {
+    width: 60vw;
+  }
+
+  .input select {
+    width: 60vw;
+  }
+
   nav {
     display: none;
   }
 
+  .about_details {
+    width: 100vw;
+  }
+
+  .contact_details {
+    width: 100vw;
+  }
+
+  .booking {
+    padding: 0;
+  }
+
   .bookingImg {
+    display: none;
+  }
+
+  .aboutImg {
+    display: none;
+  }
+
+  .contactImg {
     display: none;
   }
 
@@ -487,113 +613,28 @@ textarea::placeholder {
   }
 }
 
-/* ------------------------ */
+@media (min-width: 1440px) {
+  .input input {
+    width: 30vw;
+  }
 
-/* -------------------------------------------- */
+  .bookbtn button {
+    width: 30vw;
+  }
 
-.container2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 4rem 18rem;
-  padding: 25px 47px;
-  border-radius: 20px;
-  height: 600px;
-  width: 800px;
+  .contactBtn {
+    width: 30vw;
+  }
+
+  textarea {
+    width: 30vw;
+  }
+
+  .form-group input {
+    width: 30vw;
+  }
+
+  .input select {
+    width: 30vw;
+  }
 }
-
-.container2 img {
-  height: 100%;
-  width: auto;
-  border-radius: 20px;
-}
-
-.about_details2 {
-  margin: 0px 30px;
-}
-
-.about_details2 span {
-  color: navy;
-  font-size: 20px;
-}
-
-.about_details2 h2 {
-  font-family: "Georgia";
-  font-weight: 100;
-  font-size: 26px;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-.about_details2 h3 {
-  font-size: 20px;
-}
-
-.about_details2 p {
-  font-family: "Georgia";
-  color: gray;
-  font-size: 15px;
-}
-
-.contact span {
-  color: navy;
-  font-size: 20px;
-}
-
-/* form {
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  margin: 50px auto;
-  background-color: transparent;
-  padding: 0px;
-  margin-right: 30px;
-} */
-
-/* .form-group {
-  margin-bottom: 5px;
-} */
-
-label {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 5px;
-  color: black;
-}
-
-/* input[type="text"],
-input[type="password"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-bottom: 2px solid #ddd;
-  font-size: 18px;
-  color: black;
-  transition: border-bottom-color 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-textarea:focus {
-  outline: none;
-  border-bottom-color: navy;
-}
-
-button[type="submit"] {
-  display: block;
-  width: 50%;
-  padding: 10px;
-  background-color: navy;
-  border: none;
-  border-radius: 50px;
-  font-size: 18px;
-  color: #fff;
-  cursor: pointer;
-  left: 50%;
-  transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: green;
-} */
