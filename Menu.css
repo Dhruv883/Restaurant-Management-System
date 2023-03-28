@@ -79,6 +79,7 @@ nav {
 }
 
 .title {
+  height: 10vh;
   margin: 20px;
   display: flex;
   align-items: center;
@@ -87,12 +88,12 @@ nav {
 }
 
 .name {
-  font-size: 30px;
+  font-size: 50px;
   margin-top: 8px;
   margin-right: 16px;
   margin-left: 20px;
   font-family: "Figtree", sans-serif;
-  font-weight: bolder;
+  font-weight: 1000;
 }
 
 .title input[type="text"] {
@@ -118,4 +119,116 @@ nav {
   border-bottom: 1px solid rgb(185, 184, 184);
 
   /* justify-content: center; */
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    var(--light-yellow),
+    rgba(0, 0, 0, 0.75),
+    var(--light-yellow)
+  );
+}
+
+.foodicons {
+  margin: 20px 50px;
+
+  padding: 5px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1em;
+}
+/* ------------------------------------------------------------------------- */
+.all {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: solid rgb(255, 255, 255);
+  border-radius: 70px;
+  border-width: 3px;
+  box-shadow: 2px 5px 15px -5px rgba(143, 143, 143, 0.69);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.all:hover {
+  background-color: #c5c5c5;
+  border-color: #e4c590;
+}
+
+.all img {
+  width: 45px;
+}
+/* ------------------------------------------------------------------------- */
+.drinks {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: solid rgb(255, 255, 255);
+  border-radius: 70px;
+  border-width: 3px;
+  box-shadow: 2px 5px 15px -5px rgba(143, 143, 143, 0.69);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.drinks:hover {
+  background-color: #c5c5c5;
+  border-color: #e4c590;
+}
+
+.drinks img {
+  width: 45px;
+}
+/* ------------------------------------------------------------------------- */
+
+.italian {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: solid rgb(255, 255, 255);
+  border-radius: 70px;
+  border-width: 3px;
+  box-shadow: 2px 5px 15px -5px rgba(143, 143, 143, 0.69);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.italian:hover {
+  background-color: #c5c5c5;
+  border-color: #e4c590;
+}
+
+.italian img {
+  width: 45px;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.mexican {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: solid rgb(255, 255, 255);
+  border-radius: 70px;
+  border-width: 3px;
+  box-shadow: 2px 5px 15px -5px rgba(143, 143, 143, 0.69);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.mexican:hover {
+  background-color: #c5c5c5;
+  border-color: #e4c590;
+}
+
+.mexican img {
+  width: 45px;
 }
