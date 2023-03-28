@@ -22,7 +22,7 @@ body {
 
 header a {
   text-decoration: none;
-  color: var(--red);
+  color: var(--light-yellow);
   display: flex;
   align-items: center;
   background: transparent;
@@ -34,7 +34,7 @@ header {
   align-items: center;
   font-size: 2rem;
   font-weight: bolder;
-  color: var(--red);
+  color: var(--light-yellow);
   background: transparent;
 }
 
@@ -47,7 +47,7 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid red; */
+  /* border: 2px solid light-yellow; */
 }
 
 .img img {
@@ -63,7 +63,7 @@ main {
 }
 
 .title {
-  color: var(--red);
+  color: var(--light-yellow);
   font-weight: 600;
   font-size: 2em;
   padding: 0.5em;
@@ -78,7 +78,7 @@ main {
 .input span {
   margin-bottom: 5px;
   display: inline-block;
-  color: var(--red);
+  color: var(--light-yellow);
   font-weight: 400;
   font-size: 1.5em;
   margin-left: 5px;
@@ -100,7 +100,7 @@ main {
 }
 
 .input input[type="submit"] {
-  background: var(--red);
+  background: var(--light-yellow);
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
@@ -137,11 +137,11 @@ form {
   flex-direction: column;
   background-color: var(--beige);
   border-radius: 2em;
-  /* border: 2px solid red; */
+  /* border: 2px solid light-yellow; */
 }
 
 .content-2 {
-  /* border: 2px solid red; */
+  /* border: 2px solid light-yellow; */
   display: flex;
   border-radius: 2em;
   margin-top: 1em;
@@ -159,7 +159,7 @@ form {
 }
 
 .signUp a {
-  color: var(--red);
+  color: var(--light-yellow);
 }
 
 .signUp a:hover {
