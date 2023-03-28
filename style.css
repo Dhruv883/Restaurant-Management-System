@@ -16,12 +16,11 @@
 body {
   font-family: "Figtree", sans-serif;
   background-color: black;
-  /* overflow-x: hidden !important; */
+  overflow-x: hidden !important;
 }
 
 nav {
   height: 80px;
-
   background-color: black;
   display: flex;
   align-items: center;
@@ -197,15 +196,15 @@ nav {
 /*  ----------------------------------CONTACT US---------------------------------- */
 
 .contactUs {
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   display: flex;
   /* flex-direction: row-reverse; */
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  justify-content: space-between;
+  /* overflow: hidden; */
   background-color: black;
-  padding: 1em 0;
+  /* padding: 2em; */
 }
 
 .contactImg {
@@ -223,12 +222,13 @@ nav {
 }
 
 .contact_details {
+  height: 100vh;
   width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 2em;
-  height: 100vh;
   gap: 2em;
   color: white;
 }
@@ -299,13 +299,13 @@ nav {
 .booking {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  /* padding: 2em; */
   /* overflow: hidden; */
 }
 
 .bookingImg {
   height: 100vh;
-  width: 50vw;
+  width: 49vw;
 }
 
 .bookingImg img {
@@ -323,11 +323,6 @@ nav {
   background: black;
   color: white;
   gap: 1.25em;
-}
-
-.bookingForm div {
-  /* border: 2px solid red; */
-  padding: 0 2em;
 }
 
 .booking .title {
