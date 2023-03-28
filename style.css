@@ -15,21 +15,65 @@
 
 body {
   font-family: "Figtree", sans-serif;
-}
-
-.logo img {
-  width: 100px;
+  background-color: black;
+  overflow-x: hidden !important;
 }
 
 nav {
+  height: 80px;
+  background-color: black;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  /* background: black;
-  color: white; */
-  padding: 10px;
+  justify-content: space-between;
+  padding: 1.1rem;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navContent a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+  padding: 0 0 2px 0;
+}
+
+.navContent a:hover {
+  border-bottom: 2px solid var(--light-yellow);
+}
+
+.logo img {
+  width: 150px;
+}
+
+.logsign button {
+  border: solid;
+  border-color: var(--light-yellow);
+  background-color: transparent;
+  padding: 10px 20px;
   cursor: pointer;
-  position: sticky;
+  font-weight: 200;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.logsign button a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+}
+
+.logsign button:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
 }
 
 .menu {
@@ -45,6 +89,7 @@ nav {
   justify-content: center;
   gap: 2rem;
   padding: 1.5em;
+  background: black;
 }
 
 .img img {
@@ -92,17 +137,175 @@ nav {
   color: white;
 }
 
-/* BOOKING SECTION */
+/* -------------------------ABOUT US------------------------------------ */
+
+.aboutUs {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: black;
+  padding: 1em 0;
+}
+
+.aboutImg {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutUs img {
+  height: 600px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.about_details {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  height: 100vh;
+  gap: 2em;
+}
+
+.about_details span {
+  font-family: "Forum", cursive;
+  color: var(--light-yellow);
+  font-size: 3em;
+}
+
+.about_details h2 {
+  font-family: "Forum", cursive;
+  font-weight: 100;
+  font-size: 4em;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.about_details p {
+  color: white;
+  font-size: 1.1em;
+}
+
+/*  ----------------------------------CONTACT US---------------------------------- */
+
+.contactUs {
+  /* height: 100vh;
+  width: 100vw; */
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  justify-content: space-between;
+  /* overflow: hidden; */
+  background-color: black;
+  /* padding: 2em; */
+}
+
+.contactImg {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactUs img {
+  height: 600px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.contact_details {
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  gap: 2em;
+  color: white;
+}
+
+.contactTitle {
+  font-family: "Forum", cursive;
+  font-weight: 100;
+  font-size: 4em;
+  color: var(--light-yellow);
+  letter-spacing: 1px;
+}
+
+.contact_details h3 {
+  padding: 0.5em;
+  font-weight: 400;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.contact_details p {
+  padding: 0.25em 0.5em;
+  font-size: 1.25em;
+  color: #a6a6a6;
+  text-align: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  gap: 1.25em;
+}
+
+.form-group input {
+  border: none;
+  outline: none;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
+  padding: 10px;
+  width: 30vw;
+  font-size: 1em;
+}
+
+.form-group input::placeholder {
+  color: white;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+}
+
+.form-group input:focus {
+  border: 1px solid var(--light-yellow);
+}
+
+.contactBtn {
+  border: none;
+  font-size: 1.25em;
+  padding: 0.5em;
+  width: 30vw;
+  cursor: pointer;
+  font-family: "Figtree", sans-serif;
+  background-color: var(--light-yellow);
+}
+
+/* -----------------------BOOKING SECTION ------------------------*/
 
 .booking {
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
+  /* padding: 2em; */
+  /* overflow: hidden; */
 }
 
 .bookingImg {
   height: 100vh;
-  width: 50vw;
+  width: 49vw;
 }
 
 .bookingImg img {
@@ -116,14 +319,10 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: black;
   color: white;
   gap: 1.25em;
-}
-
-.bookingForm div {
-  /* border: 2px solid red; */
-  padding: 0 2em;
 }
 
 .booking .title {
@@ -131,6 +330,7 @@ nav {
   font-family: "Forum", cursive;
   font-weight: 500;
   padding: 0.5em;
+  color: var(--light-yellow);
 }
 
 .input input {
@@ -200,6 +400,7 @@ textarea::placeholder {
   font-family: "Figtree", sans-serif;
   font-weight: 100;
   cursor: pointer;
+  overflow: scroll;
 }
 
 .bookbtn button {
@@ -212,6 +413,223 @@ textarea::placeholder {
   background-color: var(--light-yellow);
 }
 
-.people div:nth-child(2) {
-  display: flex;
+/*  ----------------------------------MEDIA QUERIES---------------------------------- */
+
+@media (max-width: 320px) {
+  .home {
+    padding: 0.75em 0em !important;
+    gap: 1rem;
+  }
+
+  .input input {
+    padding: 10px;
+    width: 80vw;
+    font-size: 1em;
+  }
+
+  .about_details {
+    gap: 1em;
+  }
+
+  .form-group input {
+    padding: 10px;
+    width: 80vw;
+    font-size: 1em;
+  }
+
+  textarea {
+    width: 80vw;
+    height: 20vh;
+    font-size: 1em;
+  }
+
+  .input select {
+    width: 80vw;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 375px) {
+  .aboutUs span {
+    font-size: 3em;
+    padding: 0;
+  }
+
+  .about_details p {
+    font-size: 1rem;
+  }
+
+  .about_details h2 {
+    font-size: 2em;
+  }
+
+  .booking .title {
+    font-size: 2em !important;
+    padding: 0.5em 0.5em 0 0.5em;
+  }
+
+  .content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .content p {
+    font-size: 1.15rem;
+  }
+
+  .home {
+    padding: 0.75em;
+  }
+}
+
+@media (max-width: 426px) {
+  .bookingForm {
+    width: 100vw;
+  }
+
+  .about_details h2 {
+    font-size: 2em;
+  }
+
+  .input input {
+    padding: 10px;
+    width: 80vw !important;
+    font-size: 1em;
+  }
+
+  .form-group input {
+    padding: 10px;
+    width: 80vw !important;
+    font-size: 1em;
+  }
+
+  textarea {
+    width: 80vw !important;
+    height: 20vh;
+    font-size: 1em;
+  }
+
+  .input select {
+    width: 80vw !important;
+    font-size: 1em;
+  }
+
+  .contactTitle {
+    font-size: 3em;
+  }
+
+  .booking .title {
+    font-size: 3em;
+    padding: 0.5em 2em;
+  }
+
+  .bookbtn button {
+    font-size: 1em;
+    padding: 0.5em 0.25em;
+    width: 80vw !important;
+  }
+
+  .contactBtn {
+    font-size: 1em;
+    padding: 0.5em 0.25em;
+    width: 80vw !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 1.5em 0em;
+  }
+
+  .about_details span {
+    font-size: 4em;
+  }
+
+  .bookingForm {
+    padding-top: 2.25em;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .input input {
+    width: 60vw;
+  }
+
+  .bookbtn button {
+    width: 60vw;
+  }
+
+  .contactBtn {
+    width: 60vw;
+  }
+
+  textarea {
+    width: 60vw;
+  }
+
+  .form-group input {
+    width: 60vw;
+  }
+
+  .input select {
+    width: 60vw;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .about_details {
+    width: 100vw;
+  }
+
+  .contact_details {
+    width: 100vw;
+  }
+
+  .booking {
+    padding: 0;
+  }
+
+  .bookingImg {
+    display: none;
+  }
+
+  .aboutImg {
+    display: none;
+  }
+
+  .contactImg {
+    display: none;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .input input {
+    width: 30vw;
+  }
+
+  .bookbtn button {
+    width: 30vw;
+  }
+
+  .contactBtn {
+    width: 30vw;
+  }
+
+  textarea {
+    width: 30vw;
+  }
+
+  .form-group input {
+    width: 30vw;
+  }
+
+  .input select {
+    width: 30vw;
+  }
 }
