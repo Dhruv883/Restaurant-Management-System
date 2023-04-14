@@ -59,7 +59,7 @@ main {
   align-items: center;
   justify-content: start;
   cursor: pointer;
-  gap: 0.5em;
+  gap: 0.75em;
 }
 
 .sidebar div:not(:nth-child(2)) {
