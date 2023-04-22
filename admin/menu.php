@@ -1,5 +1,7 @@
 <?php 
+  require('../database.php');
   include('auth.php'); 
+  
 ?>
 
       <nav>

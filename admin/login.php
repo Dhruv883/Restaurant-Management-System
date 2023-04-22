@@ -1,7 +1,5 @@
 <?php
-  session_start();
-  require('../database.php');
-  
+  require('../database.php'); 
   if (isset($_POST['submit'])) {
    
     $username = $_POST['username'];
@@ -9,9 +7,8 @@
 
     $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
     $res = mysqli_query($conn , $sql);
-
-    if (mysqli_num_rows($res) > 0) {
-      
+    $rows = mysqli_num_rows($res);
+    if ($rows == 1) {
       $_SESSION['admin'] = $username;
       
       header("Location:http://localhost/Restaurant-Management-System/admin/index.php");
@@ -20,7 +17,6 @@
       echo "<script>alert('Username or password doesnt match');</script>";
 
     }
-
   }
 ?>
 
