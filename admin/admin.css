@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600&family=Forum&family=Lato:wght@300;400&family=Montserrat:wght@200;300;400&display=swap");
+
+:root {
+  --darkGrey: #45494c;
+  --red: #c21010;
+  --light-yellow: #e4c590;
+  --light-orange: #eeb77f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  overflow-x: hidden !important;
+}
+
+nav {
+  height: 12vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15em;
+  padding: 1.1rem;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navContent a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+  padding: 0 0 2px 0;
+}
+
+.navContent a:hover {
+  border-bottom: 2px solid var(--light-yellow);
+}
+
+.hidden {
+  width: 100px;
+  visibility: hidden;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.homecontent {
+  height: 88vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  gap: 2em;
+  background-color: black;
+  color: var(--light-yellow);
+  border-radius: 5px;
+}
+
+.card span:nth-child(1) {
+  font-size: 5em;
+}
+
+.card span:nth-child(2) {
+  font-size: 2em;
+}
+
+.logsign button {
+  border: solid;
+  border-color: var(--light-yellow);
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.logsign button a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+}
+
+.logsign button:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
