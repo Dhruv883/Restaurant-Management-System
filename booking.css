@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600&family=Forum&family=Lato:wght@300;400&family=Montserrat:wght@200;300;400&display=swap");
+
+:root {
+  --darkGrey: #45494c;
+  --red: #c21010;
+  --light-yellow: #e4c590;
+  --light-orange: #eeb77f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: black;
+  overflow-x: hidden !important;
+}
+
+nav {
+  height: 80px;
+
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navContent a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+  padding: 0 0 2px 0;
+}
+
+.navContent a:hover {
+  border-bottom: 2px solid var(--light-yellow);
+}
+
+.logo img {
+  width: 150px;
+}
+
+.logsign button {
+  border: solid;
+  border-color: var(--light-yellow);
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.logsign button a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+}
+
+.logsign button:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+
+.booking {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 2em; */
+  /* overflow: hidden; */
+}
+
+.bookingImg {
+  height: 100vh;
+  width: 49vw;
+}
+
+.bookingImg img {
+  height: 100vh;
+  width: 50vw;
+}
+
+.bookingForm {
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+  gap: 1.25em;
+}
+
+.booking .title {
+  font-size: 3em;
+  font-family: "Forum", cursive;
+  font-weight: 500;
+  padding: 0.5em;
+  color: var(--light-yellow);
+}
+
+.input input {
+  border: none;
+  outline: none;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
+  padding: 10px;
+  width: 30vw;
+  font-size: 1em;
+}
+
+input[type="date"] {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+.input input::placeholder {
+  color: white;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+}
+
+.input input:focus {
+  border: 1px solid var(--light-yellow);
+}
+
+textarea {
+  border: none;
+  outline: none;
+  width: 30vw;
+  height: 20vh;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
+  padding: 10px;
+  font-size: 1em;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: white;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+}
+
+.input select {
+  border: none;
+  outline: none;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
+  padding: 10px;
+  width: 30vw;
+  font-size: 1em;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  overflow: scroll;
+  cursor: pointer;
+}
+
+.input select option {
+  font-size: 1em;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+  cursor: pointer;
+  overflow: scroll;
+}
+
+.bookbtn button {
+  border: none;
+  font-size: 1.25em;
+  padding: 0.5em;
+  width: 30vw;
+  cursor: pointer;
+  font-family: "Figtree", sans-serif;
+  background-color: var(--light-yellow);
+}

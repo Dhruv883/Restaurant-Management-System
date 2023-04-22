@@ -189,9 +189,10 @@ hr {
   width: 45px;
 }
 /* ------------------------------------------------------------------------- */
-.drinks {
+.category {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 70px;
   height: 70px;
   border: solid rgb(255, 255, 255);
@@ -202,109 +203,15 @@ hr {
   transition: 0.1s;
 }
 
-.drinks:hover {
+.category:hover {
   background-color: #ffffff;
   border-color: #e4c590;
 }
 
-.drinks img {
+.category img {
   width: 45px;
 }
 /* ------------------------------------------------------------------------- */
-
-.italian {
-  display: flex;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-  border: solid rgb(255, 255, 255);
-  border-radius: 70px;
-  border-width: 3px;
-  box-shadow: 2px 5px 15px -5px rgba(143, 143, 143, 0.69);
-  cursor: pointer;
-  transition: 0.1s;
-}
-
-.italian:hover {
-  background-color: #ffffff;
-  border-color: #e4c590;
-}
-
-.italian img {
-  width: 45px;
-}
-
-/* ------------------------------------------------------------------------- */
-
-.mexican {
-  display: flex;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-  border: solid rgb(255, 255, 255);
-  border-radius: 70px;
-  border-width: 3px;
-  box-shadow: 2px 5px 15px -5px rgba(143, 143, 143, 0.69);
-  cursor: pointer;
-  transition: 0.1s;
-}
-
-.mexican:hover {
-  background-color: #ffffff;
-  border-color: #e4c590;
-}
-
-.mexican img {
-  width: 45px;
-}
-
-/* ---------------------------------------------------------------- */
-
-.kebabs {
-  display: flex;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-  border: solid rgb(255, 255, 255);
-  border-radius: 70px;
-  border-width: 3px;
-  box-shadow: 2px 5px 15px -5px rgba(143, 143, 143, 0.69);
-  cursor: pointer;
-  transition: 0.1s;
-}
-
-.kebabs:hover {
-  background-color: #ffffff;
-  border-color: #e4c590;
-}
-
-.kebabs img {
-  width: 45px;
-}
-
-/* ---------------------------------------------------------------- */
-
-.indian {
-  display: flex;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-  border: solid rgb(255, 255, 255);
-  border-radius: 70px;
-  border-width: 3px;
-  box-shadow: 2px 5px 15px -5px rgba(143, 143, 143, 0.69);
-  cursor: pointer;
-  transition: 0.1s;
-}
-
-.indian:hover {
-  background-color: #ffffff;
-  border-color: #e4c590;
-}
-
-.indian img {
-  width: 45px;
-}
 
 /* ---------------------------------------------------------------- */
 

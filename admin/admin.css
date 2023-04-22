@@ -76,7 +76,7 @@ nav {
   gap: 2em;
   background-color: black;
   color: var(--light-yellow);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .card span:nth-child(1) {
