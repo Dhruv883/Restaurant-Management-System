@@ -20,11 +20,11 @@ body {
 }
 
 nav {
-  height: 80px;
+  height: 12vh;
   background-color: black;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   gap: 15em;
   padding: 1.1rem;
   font-family: "Figtree", sans-serif;
@@ -49,6 +49,40 @@ nav {
   border-bottom: 2px solid var(--light-yellow);
 }
 
+.hidden {
+  width: 100px;
+  visibility: hidden;
+}
+
 .logo img {
   width: 150px;
+}
+
+.homecontent {
+  height: 88vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  gap: 2em;
+  background-color: black;
+  color: var(--light-yellow);
+  border-radius: 5px;
+}
+
+.card span:nth-child(1) {
+  font-size: 5em;
+}
+
+.card span:nth-child(2) {
+  font-size: 2em;
 }
