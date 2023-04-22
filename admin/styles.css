@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600&family=Forum&family=Lato:wght@300;400&family=Montserrat:wght@200;300;400&display=swap");
+
+:root {
+  --darkGrey: #45494c;
+  --red: #c21010;
+  --light-yellow: #e4c590;
+  --light-orange: #eeb77f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  overflow-x: hidden !important;
+}
+
+nav {
+  height: 80px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 15em;
+  padding: 1.1rem;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navContent a {
+  text-decoration: none;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+  padding: 0 0 2px 0;
+}
+
+.navContent a:hover {
+  border-bottom: 2px solid var(--light-yellow);
+}
+
+.logo img {
+  width: 150px;
+}
