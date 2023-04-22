@@ -1,31 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../images/translogo-alt.png"
-      type="image/x-icon"
-    />
-    <title>Sign In</title>
-    <link rel="stylesheet" href="SignIn.css" />
-  </head>
-
-  <body>
-    <header>
-      <img src="images/translogo.png" alt="Docplus" />
-    </header>
-
-    <main class="main">
-      <div class="img">
-        <img src="./images/6413870.jpg" alt="" srcset="" />
-      </div>
-      <div class="container">
-        <div class="form">
-          <form action="">
-            <div class="title">Sign In</div>
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="login.css">
+      <link rel="shortcut icon" href="../images/translogo-alt.png" type="image/x-icon">
+      <title>Log-In</title>
+</head>
+<body>
+      <div class="form">
+          <form action="admin-login.php" method="post">
+            <div class="title">Admin Log-In</div>
             <div class="content">
               <div class="input">
                 <span>Username</span>
@@ -56,7 +42,5 @@
             </div>
           </form>
         </div>
-      </div>
-    </main>
-  </body>
+</body>
 </html>
