@@ -4,13 +4,13 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="login.css">
       <link rel="shortcut icon" href="../images/translogo-alt.png" type="image/x-icon">
+      <link rel="stylesheet" href="login.css">
       <title>Log-In</title>
 </head>
 <body>
       <div class="form">
-          <form action="admin-login.php" method="post">
+          <form action="login.php" method="post">
             <div class="title">Admin Log-In</div>
             <div class="content">
               <div class="input">
@@ -18,8 +18,8 @@
                 <input
                   type="text"
                   placeholder="Username"
-                  id="name"
-                  name="name"
+                  id="username"
+                  name="username"
                   required
                 />
               </div>
@@ -34,13 +34,32 @@
                 />
               </div>
               <div class="input submit">
-                <input type="submit" value="Sign In" name="" />
+                <input type="submit" value="Sign In" name="submit" />
               </div>
-              <div class="signUp input">
-                <p>New User? <a href="./SignUp.html">Sign up</a></p>
-              </div>
+              
             </div>
           </form>
         </div>
 </body>
 </html>
+
+<?php
+
+  require('../database.php');
+
+  if (isset($_POST['submit'])) {
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
+    $res = mysqli_query($conn , $sql);
+    if (mysqli_num_rows(mysqli_query($conn, $sql)) <= 0) {
+        echo "<script>alert('Username or password doesnt match');</script>";
+    }else{
+      
+      header("Location:http://localhost/Restaurant-Management-System/admin/index.php");
+       
+    }
+
+  }

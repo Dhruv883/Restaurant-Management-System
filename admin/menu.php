@@ -12,6 +12,8 @@
         <span><a href="order.php">Order</a></span>
       </div>
 
-      <div class="hidden"></div>
+       <div class="logsign">
+        <button><a href="logout.php">Log-Out</a></button>
+      </div>
       
     </nav>
