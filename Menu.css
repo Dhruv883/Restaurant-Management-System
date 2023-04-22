@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
 
 :root {
   --orange: #f99638;
@@ -92,7 +93,7 @@ nav {
   margin-top: 8px;
   margin-right: 16px;
   margin-left: 20px;
-  font-family: "Figtree", sans-serif;
+  font-family: "Tilt Prism", cursive;
   font-weight: 1000;
 }
 
@@ -133,10 +134,10 @@ hr {
 }
 
 .foodicons {
-  margin: 20px 50px;
+  margin: 20px auto;
   background-color: black;
   border-radius: 10px;
-
+  width: 98vw;
   padding: 10px;
   display: flex;
   justify-content: left;
@@ -188,6 +189,24 @@ hr {
 .all img {
   width: 45px;
 }
+
+.all-label {
+  position: absolute;
+  top: 219px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--light-yellow);
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.1s;
+}
+
+.all:hover .all-label {
+  opacity: 1;
+}
 /* ------------------------------------------------------------------------- */
 .drinks {
   display: flex;
@@ -210,6 +229,7 @@ hr {
 .drinks img {
   width: 45px;
 }
+
 /* ------------------------------------------------------------------------- */
 
 .italian {
@@ -313,6 +333,6 @@ hr {
   box-shadow: 0px 1px 20px 0px rgba(143, 143, 143, 0.69);
   border-radius: 20px;
   width: 98vw;
-  margin: auto;
   height: 500px;
+  margin: 55px auto 0 auto;
 }
