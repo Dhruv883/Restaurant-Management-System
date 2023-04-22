@@ -1,3 +1,30 @@
+<?php
+  session_start();
+  require('../database.php');
+  
+  if (isset($_POST['submit'])) {
+   
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
+    $res = mysqli_query($conn , $sql);
+
+    if (mysqli_num_rows($res) > 0) {
+      
+      $_SESSION['admin'] = $username;
+      
+      header("Location:http://localhost/Restaurant-Management-System/admin/index.php");
+
+    }else{
+      echo "<script>alert('Username or password doesnt match');</script>";
+
+    }
+
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,23 +70,3 @@
 </body>
 </html>
 
-<?php
-
-  require('../database.php');
-
-  if (isset($_POST['submit'])) {
-
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
-    $res = mysqli_query($conn , $sql);
-    if (mysqli_num_rows(mysqli_query($conn, $sql)) <= 0) {
-        echo "<script>alert('Username or password doesnt match');</script>";
-    }else{
-      
-      header("Location:http://localhost/Restaurant-Management-System/admin/index.php");
-       
-    }
-
-  }

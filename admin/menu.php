@@ -1,4 +1,6 @@
-
+<?php 
+  include('auth.php'); 
+?>
 
       <nav>
       <div class="logo">
