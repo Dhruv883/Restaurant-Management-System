@@ -12,6 +12,13 @@
       <title>Document</title>
 </head>
 <body>
-      Manage Category
+      <div class="categoryPage">
+            <div class="add">
+                  <a href="addCategory.php"><button>Add Category</button></a>
+            </div>
+            <div class="display">
+                  Categories
+            </div>
+      </div>
 </body>
 </html>

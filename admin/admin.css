@@ -110,3 +110,94 @@ nav {
   transition: 0.3s;
   transform: scale(1.05);
 }
+
+/* ------------------CATEGORY ---------------- */
+
+.categoryPage {
+  border: 2px solid red;
+  height: 88vh;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
+
+.categoryPage button {
+  border: none;
+  background-color: black;
+  color: var(--light-yellow);
+  font-family: "Figtree", sans-serif;
+  padding: 0.5em;
+  font-size: 1.25em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ADD CATEGORY */
+
+.addCatpage {
+  border: 2px solid red;
+  height: 88vh;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.addForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.input input {
+  border: none;
+  outline: none;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
+  padding: 16px;
+  width: 30vw;
+  font-size: 1em;
+}
+
+.input input::placeholder {
+  color: white;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+}
+
+.input input:focus {
+  border: 1px solid var(--light-yellow);
+}
+
+.addbtn button {
+  border: none;
+}
+
+.addbtn input[type="submit"] {
+  border: none;
+  font-size: 1.25em;
+  padding: 0.5em;
+  width: 30vw;
+  cursor: pointer;
+  font-family: "Figtree", sans-serif;
+  background-color: var(--light-yellow);
+  font-weight: 500;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: none;
+  outline: none;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
+  padding: 16px 196px 16px 16px;
+  width: 30vw;
+  font-size: 1em;
+}
