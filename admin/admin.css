@@ -185,7 +185,7 @@ nav {
 }
 
 input[type="file"] {
-  display: none;
+  display: none !important;
 }
 
 .custom-file-upload {
@@ -195,8 +195,8 @@ input[type="file"] {
   color: white;
   border: 1px solid var(--darkGrey);
   padding: 16px 196px 16px 16px;
-  width: 30vw;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .display {
@@ -212,7 +212,8 @@ input[type="file"] {
 
 .catcard {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 9em;
   align-items: center;
   padding: 0.5em 1.25em;
   margin: 0 50px;
@@ -241,8 +242,20 @@ input[type="file"] {
 }
 
 .id {
+  width: 80px;
   padding: 0.25em 0.75em;
   border-right: 2px solid var(--light-orange);
+}
+
+.name {
+  width: 100px;
+}
+
+.catcard .img {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .catcard .img img {
@@ -253,8 +266,13 @@ input[type="file"] {
   display: flex;
   align-items: center;
   gap: 1.5em;
+  width: 350px;
 }
 
 .add {
   padding: 0.5em 3em;
+}
+
+.hidden {
+  display: none;
 }

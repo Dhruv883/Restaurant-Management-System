@@ -34,7 +34,7 @@
                               <div class="img"><img src="../images/category/'.$img.'" alt="'.$name.'" srcset=""></div>
                               <div class="name">'.$name.'</div>
                               <div class="btns"> 
-                                    <div class="update"><a href="#"><button>Update Category</button></a></div>
+                                    <div class="update"><a href="update-category.php?id='.$id.'&img='.$img.'&name='.$name.'"><button>Update Category</button></a></div>
                                     <div class="delete"><a href="delete-category.php?id='.$id.'&img='.$img.'"><button>Delete Category</button></a></div>
                               </div>
                               </div>

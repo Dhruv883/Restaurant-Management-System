@@ -8,18 +8,26 @@
             if(isset($_FILES['catimg']['name'])){
 
                   $catimg = $_FILES['catimg']['name'];
+                  
+                  if($catimg != ""){
+                        
+                        $ext = end(explode('.', $catimg));
+                        $catimg = $catname.'.'.$ext;
 
-                  $ext = end(explode('.', $catimg));
-                  $catimg = $catname.'.'.$ext;
+                        $src_path = $_FILES['catimg']['tmp_name'];
+                        $dest_path = "../images/category/".$catimg;
 
-                  $src_path = $_FILES['catimg']['tmp_name'];
-                  $dest_path = "../images/category/".$catimg;
+                        $upload = move_uploaded_file($src_path, $dest_path);
 
-                  $upload = move_uploaded_file($src_path, $dest_path);
-
-                  if(!$upload){
-                        echo "<script>alert('Couldn't upload image');</script>";
+                        if(!$upload){
+                              echo "<script>alert('Couldn't upload image');</script>";
+                        
+                        }
+                  }else  {
+                        $catimg = "Default.jpg";
                   }
+
+                  
             }else{
                   $catimg = "../images/category/Default.jpg";
             }
@@ -63,8 +71,8 @@
             />
             </div>
 
-            <div class="name input">
-           <label class="custom-file-upload">
+            <div class="">
+            <label class="custom-file-upload">
             <input type="file"  name="catimg"/>
             Upload Category Image
             </label>
