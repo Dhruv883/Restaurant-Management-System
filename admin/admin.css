@@ -111,18 +111,17 @@ nav {
   transform: scale(1.05);
 }
 
-/* ------------------CATEGORY ---------------- */
+/* ------------------ CATEGORY ------------------ */
 
 .categoryPage {
-  border: 2px solid red;
   height: 88vh;
   padding: 1em;
   display: flex;
   flex-direction: column;
-  gap: 2.5em;
+  gap: 2em;
 }
 
-.categoryPage button {
+.categoryPage .add button {
   border: none;
   background-color: black;
   color: var(--light-yellow);
@@ -133,10 +132,9 @@ nav {
   cursor: pointer;
 }
 
-/* ADD CATEGORY */
+/* ------------------ ADD CATEGORY ------------------*/
 
 .addCatpage {
-  border: 2px solid red;
   height: 88vh;
   padding: 1.5em;
   display: flex;
@@ -200,4 +198,61 @@ input[type="file"] {
   padding: 16px 196px 16px 16px;
   width: 30vw;
   font-size: 1em;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.display h1 {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.catcard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.25em;
+  margin: 0 50px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.catcard div button {
+  border: none;
+  background-color: black;
+  color: var(--light-yellow);
+  font-family: "Figtree", sans-serif;
+  padding: 0.65em;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.catcard > div:nth-child(1) {
+  /* border: 1px solid red; */
+  font-size: 2.5em;
+  color: var(--darkGrey);
+}
+
+.catcard > div:nth-child(3) {
+  font-size: 2.2em;
+  color: var(--darkGrey);
+}
+
+.id {
+  padding: 0.25em 0.75em;
+  border-right: 2px solid var(--light-orange);
+}
+
+.catcard .img img {
+  width: 80px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
 }

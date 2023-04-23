@@ -23,14 +23,26 @@
                   $res = mysqli_query($conn, $sql);
                   $count =  mysqli_num_rows($res); 
                   if($count > 0){
-                  while($row = mysqli_fetch_assoc($res)){
-                        $name = $row['catname'];
-                        $id = $row['catid'];
-                        $img = $row['catimg'];
-
-                  }
-          } 
+                        while($row = mysqli_fetch_assoc($res)){
+                              $name = $row['catname'];
+                              $id = $row['catid'];
+                              $img = $row['catimg'];
+                  
+                              echo '
+                              <div class="catcard">
+                              <div class="id">'.$id.'</div>
+                              <div class="img"><img src="../images/category/'.$img.'" alt="Indian" srcset=""></div>
+                              <div class="name">'.$name.'</div>
+                              <div class="btns"> 
+                                    <div class="update"><a href="#"><button>Update Category</button></a></div>
+                                    <div class="delete"><a href="#"><button>Delete Category</button></a></div>
+                              </div>
+                              </div>
+                              ';
+                        }
+                  } 
             ?>
+                  
             </div>
       </div>
       
