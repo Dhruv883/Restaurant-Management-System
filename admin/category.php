@@ -17,8 +17,22 @@
                   <a href="addCategory.php"><button>Add Category</button></a>
             </div>
             <div class="display">
-                  Categories
+                  <h1>Categories</h1>
+            <?php
+                  $sql = "SELECT * FROM category";
+                  $res = mysqli_query($conn, $sql);
+                  $count =  mysqli_num_rows($res); 
+                  if($count > 0){
+                  while($row = mysqli_fetch_assoc($res)){
+                        $name = $row['catname'];
+                        $id = $row['catid'];
+                        $img = $row['catimg'];
+
+                  }
+          } 
+            ?>
             </div>
       </div>
+      
 </body>
 </html>
