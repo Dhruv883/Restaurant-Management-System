@@ -118,7 +118,6 @@ nav {
   padding: 1em;
   display: flex;
   flex-direction: column;
-  gap: 2em;
 }
 
 .categoryPage .add button {
@@ -127,7 +126,7 @@ nav {
   color: var(--light-yellow);
   font-family: "Figtree", sans-serif;
   padding: 0.5em;
-  font-size: 1.25em;
+  font-size: 1.5em;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -215,7 +214,7 @@ input[type="file"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 1.25em;
+  padding: 0.5em 1.25em;
   margin: 0 50px;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
 }
@@ -232,7 +231,6 @@ input[type="file"] {
 }
 
 .catcard > div:nth-child(1) {
-  /* border: 1px solid red; */
   font-size: 2.5em;
   color: var(--darkGrey);
 }
@@ -255,4 +253,8 @@ input[type="file"] {
   display: flex;
   align-items: center;
   gap: 1.5em;
+}
+
+.add {
+  padding: 0.5em 3em;
 }

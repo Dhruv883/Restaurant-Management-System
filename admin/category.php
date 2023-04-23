@@ -31,11 +31,11 @@
                               echo '
                               <div class="catcard">
                               <div class="id">'.$id.'</div>
-                              <div class="img"><img src="../images/category/'.$img.'" alt="Indian" srcset=""></div>
+                              <div class="img"><img src="../images/category/'.$img.'" alt="'.$name.'" srcset=""></div>
                               <div class="name">'.$name.'</div>
                               <div class="btns"> 
                                     <div class="update"><a href="#"><button>Update Category</button></a></div>
-                                    <div class="delete"><a href="#"><button>Delete Category</button></a></div>
+                                    <div class="delete"><a href="delete-category.php?id='.$id.'&img='.$img.'"><button>Delete Category</button></a></div>
                               </div>
                               </div>
                               ';

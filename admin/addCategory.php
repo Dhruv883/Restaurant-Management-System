@@ -4,7 +4,7 @@
       if (isset($_POST['submit'])) {
            
             $catname = $_POST['catname'];
-            $catimg = '';
+            $catimg = "";
             if(isset($_FILES['catimg']['name'])){
 
                   $catimg = $_FILES['catimg']['name'];
@@ -20,6 +20,8 @@
                   if(!$upload){
                         echo "<script>alert('Couldn't upload image');</script>";
                   }
+            }else{
+                  $catimg = "../images/category/Default.jpg";
             }
 
             $sql = "INSERT INTO category (catname, catimg) VALUES ('$catname' , '$catimg')";
