@@ -9,8 +9,10 @@
 
                   $catimg = $_FILES['catimg']['name'];
 
-                  $src_path = $_FILES['catimg']['tmp_name'];
+                  $ext = end(explode('.', $catimg));
+                  $catimg = $catname.'.'.$ext;
 
+                  $src_path = $_FILES['catimg']['tmp_name'];
                   $dest_path = "../images/category/".$catimg;
 
                   $upload = move_uploaded_file($src_path, $dest_path);
