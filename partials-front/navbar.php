@@ -19,7 +19,7 @@
 
       <div class="navContent">
         <span><a href="index.php">Home</a></span>
-        <span><a href="Menu.php">Food</a></span>
+        <span><a href="Menu.php?id=1">Food</a></span>
         <span><a href="index.php#aboutUs">About</a></span>
         <span><a href="index.php#contactUs">Contact us</a></span>
       </div>
