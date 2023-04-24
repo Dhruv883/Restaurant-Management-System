@@ -14,22 +14,32 @@
 </head>
 <body>
       <div class="homecontent">
-    
-      <div class="categories card">
-        <span>5</span>
+      <?php 
+
+        $sql = "SELECT * FROM category";
+        $res = mysqli_query($conn, $sql);
+        $count = mysqli_num_rows($res);
+
+        $sql1 = "SELECT * FROM category";
+        $res1 = mysqli_query($conn, $sql);
+        $count1 = mysqli_num_rows($res);
+        echo '
+        <div class="categories card">
+        <span>'.$count.'</span>
         <span>Categories</span>
-      </div>
-
-      <div class="categories card">
-        <span>5</span>
+        </div>
+        
+        <div class="categories card">
+        <span>'.$count1.'</span>
         <span>Food Items</span>
-      </div>
-
-      <div class="categories card">
-        <span>5</span>
+        </div>
+        
+        <div class="categories card">
+        <span>0</span>
         <span>Orders</span>
       </div>
-
+      ';
+      ?>
       </div>
      
 </body>
