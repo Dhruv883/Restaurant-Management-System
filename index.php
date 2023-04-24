@@ -1,3 +1,7 @@
+<?php 
+    include('./partials-front/navbar.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,22 +18,6 @@
   </head>
 
   <body>
-    <nav>
-      <div class="logo">
-        <span><img src="images/translogo.png" alt="" /></span>
-      </div>
-
-      <div class="navContent">
-        <span><a href="">Home</a></span>
-        <span><a href="Menu.html">Food</a></span>
-        <span><a href="#aboutUs">About</a></span>
-        <span><a href="#contactUs">Contact us</a></span>
-      </div>
-
-      <div class="logsign">
-        <button><a href="SignIn.html">Register / Log-in</a></button>
-      </div>
-    </nav>
 
     <main>
       <section class="home" id="home">
@@ -46,7 +34,7 @@
               combines exceptional food with a comfortable ambiance.
             </p>
           </div>
-          <button><a href="booking.html"> Book a Table </a></button>
+          <button><a href="booking.php"> Book a Table </a></button>
         </div>
       </section>
 

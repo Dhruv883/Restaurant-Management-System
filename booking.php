@@ -1,3 +1,7 @@
+<?php
+  include('./partials-front/navbar.php')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,22 +12,7 @@
     <title>Document</title>
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <span><img src="images/translogo.png" alt="" /></span>
-      </div>
-
-      <div class="navContent">
-        <span><a href="index.html">Home</a></span>
-        <span><a href="Menu.html">Food</a></span>
-        <span><a href="index.html#aboutUs">About</a></span>
-        <span><a href="index.html#contactUs">Contact us</a></span>
-      </div>
-
-      <div class="logsign">
-        <button><a href="SignIn.html">Register / Log-in</a></button>
-      </div>
-    </nav>
+ 
     <div class="booking" id="booking">
       <div class="bookingImg"><img src="images/restaurant.jpg" alt="" /></div>
       <div class="bookingForm">

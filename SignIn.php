@@ -51,7 +51,7 @@
                 <input type="submit" value="Sign In" name="" />
               </div>
               <div class="signUp input">
-                <p>New User? <a href="./SignUp.html">Sign up</a></p>
+                <p>New User? <a href="./SignUp.php">Sign up</a></p>
               </div>
             </div>
           </form>
