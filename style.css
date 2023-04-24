@@ -11,13 +11,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Figtree", sans-serif;
   background-color: black;
   overflow-x: hidden !important;
+  scroll-behavior: smooth;
 }
 
 nav {

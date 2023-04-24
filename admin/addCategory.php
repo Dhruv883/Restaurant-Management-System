@@ -15,7 +15,7 @@
                         $catimg = $catname.'.'.$ext;
 
                         $src_path = $_FILES['catimg']['tmp_name'];
-                        $dest_path = "../images/category/".$catimg;
+                        $dest_path = "../images/category-img/".$catimg;
 
                         $upload = move_uploaded_file($src_path, $dest_path);
 
@@ -28,8 +28,6 @@
                   }
 
                   
-            }else{
-                  $catimg = "../images/category/Default.jpg";
             }
 
             $sql = "INSERT INTO category (catname, catimg) VALUES ('$catname' , '$catimg')";

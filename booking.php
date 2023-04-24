@@ -1,6 +1,7 @@
-<?php
-  include('./partials-front/navbar.php')
+<?php 
+  include('./partials-front/navbar.php');
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,6 @@
     <title>Document</title>
   </head>
   <body>
- 
     <div class="booking" id="booking">
       <div class="bookingImg"><img src="images/restaurant.jpg" alt="" /></div>
       <div class="bookingForm">

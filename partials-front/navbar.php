@@ -24,5 +24,6 @@
         <button><a href="SignIn.php">Register / Log-in</a></button>
       </div>
     </nav>
+
 </body>
 </html>

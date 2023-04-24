@@ -1,6 +1,7 @@
 <?php 
-    include('./partials-front/navbar.php');
+  include('./partials-front/navbar.php');
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,7 @@
   </head>
 
   <body>
-
+    
     <main>
       <section class="home" id="home">
         <div class="img">

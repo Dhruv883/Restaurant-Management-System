@@ -1,5 +1,5 @@
 <?php 
-    include('./partials-front/navbar.php');
+  include('./partials-front/navbar.php');
 ?>
 
 
