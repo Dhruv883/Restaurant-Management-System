@@ -1,5 +1,7 @@
 <?php 
   include('./partials-front/navbar.php');
+
+ 
 ?>
 
 
@@ -35,29 +37,62 @@
     </div>
 
     <hr />
-
+    
     <div class="foodicons">
-      <div class="all">
-        <img src="images/all.svg" alt="all" />
-      </div>
+      <?php 
+        $sql = "SELECT * FROM category";
+        $res = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($res)) {
+          $id = $row['catid'];
+          $name = $row['catname'];
+          $img = $row['catimg'];
+          if ($id == $_GET['id']) { $class = 'active'; } else {
+            $class = '';
+          }
+          echo '
+          <div class="item">
+            <a href="Menu.php?id='.$id.'">
+            <button>
+            <div class="all '.$class.'">
+            <img src="images/category-img/'.$img.'" alt="'.$name.'" />
+            </div>
+            </button>
+            </a>
+          </div>
+          ';
+        }
+      ?>
 
-      <div class="drinks category">
-        <img src="images/drinks.svg" alt="drinks" />
-      </div>
-      <div class="italian category">
-        <img src="images/pizza.svg" alt="Italian" />
-      </div>
-      <div class="mexican category">
-        <img src="images/mexican.svg" alt="Mexican" />
-      </div>
-      <div class="kebabs category">
-        <img src="images/kebab.svg" alt="kebabs" />
-      </div>
-      <div class="indian category">
-        <img src="images/indian.svg" alt="kebabs" />
-      </div>
+    </div> 
+
+    <div class="menuitems">
+      <?php 
+
+        if(isset($_GET['id'])){
+
+          $id = $_GET['id'];
+          if($id == 1){
+            $sql = "SELECT * FROM food";
+          }else{
+            $sql = "SELECT * FROM food WHERE food_cat_id = '$id'";
+          }
+          $res = mysqli_query($conn, $sql);
+
+          while ($row = mysqli_fetch_assoc($res)) {
+           
+            echo '
+            <div class="fooditem">
+            <div class="foodimg"><img src="images/food-img/burger.jpg" alt="" srcset=""></div>
+            <div class="info">
+            <div class="foodtitle">'.$row['foodname'].'</div>
+            <div class="foodprice">₹ '.$row['food_price'].' </div>
+            <div class="addtocart"><button>Add</button></div>
+            </div>
+            </div>
+            ';
+          }
+        }
+      ?>
     </div>
-
-    <div class="menuitems"></div>
   </body>
 </html>

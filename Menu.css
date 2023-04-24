@@ -13,70 +13,14 @@
 
 body {
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-nav {
-  height: 80px;
-
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.1rem;
-  font-family: "Figtree", sans-serif;
-  font-size: 16px;
-}
-
-.navContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.navContent a {
-  text-decoration: none;
-  color: var(--light-yellow);
-  font-size: 1.25em;
-  padding: 0 0 2px 0;
-}
-
-.navContent a:hover {
-  border-bottom: 2px solid var(--light-yellow);
-}
-
-.logo img {
-  width: 150px;
-}
-
-.logsign button {
-  border: solid;
-  border-color: var(--light-yellow);
-  background-color: transparent;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: 200;
-  font-size: 14px;
-  text-align: center;
-  border-radius: 10px;
-  transition: 0.1s;
-}
-
-.logsign button a {
-  text-decoration: none;
-  color: var(--light-yellow);
-  font-size: 1.25em;
-}
-
-.logsign button:hover {
-  transition: 0.3s;
-  transform: scale(1.05);
 }
 
 .title {
@@ -134,37 +78,16 @@ hr {
 }
 
 .foodicons {
-  margin: 20px auto;
+  margin: 10px 10px 25px 10px;
   background-color: black;
   border-radius: 10px;
-  width: 98vw;
+  width: 97vw;
   padding: 10px;
   display: flex;
   justify-content: left;
   align-items: center;
   gap: 2.5em;
   overflow-x: scroll;
-  overflow-y: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--light-yellow);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--light-yellow);
 }
 
 /* ------------------------------------------------------------------------- */
@@ -207,6 +130,7 @@ hr {
 .all:hover .all-label {
   opacity: 1;
 }
+
 /* ------------------------------------------------------------------------- */
 .category {
   display: flex;
@@ -227,19 +151,108 @@ hr {
   border-color: #e4c590;
 }
 
+.active {
+  background-color: #ffffff;
+  border-color: #e4c590;
+}
+
 .category img {
   width: 45px;
 }
-
-/* ------------------------------------------------------------------------- */
-
-/* ---------------------------------------------------------------- */
 
 .menuitems {
   background-color: #ffffff;
   box-shadow: 0px 1px 20px 0px rgba(143, 143, 143, 0.69);
   border-radius: 20px;
-  width: 98vw;
-  height: 500px;
-  margin: 55px auto 0 auto;
+  width: 97vw;
+  /* height: 500px; */
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  min-height: 300px;
+}
+
+.item a {
+  text-decoration: none;
+  background-color: black;
+  color: var(--light-yellow);
+  font-size: 1.25em;
+  padding: 0 0 2px 0;
+}
+
+.item button {
+  border: none;
+  background-color: black;
+}
+
+.fooditem {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid red; */
+  width: 40vw;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+  padding: 1em;
+}
+
+.foodimg {
+  width: 160px;
+  /* border: 1px solid red; */
+}
+
+.foodimg img {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.fooditem .info .foodtitle {
+  font-size: 2em;
+}
+
+.fooditem .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.fooditem .info .foodprice {
+  font-size: 1.25em;
+}
+
+.addtocart button {
+  border: none;
+  background-color: black;
+  color: var(--light-yellow);
+  padding: 5px 15px;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 1.25em;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+/* ----------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-yellow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-yellow);
 }
