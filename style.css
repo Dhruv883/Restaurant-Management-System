@@ -296,6 +296,25 @@ nav {
   background-color: var(--light-yellow);
 }
 
+textarea {
+  border: none;
+  outline: none;
+  width: 30vw;
+  height: 20vh;
+  background-color: #1b1c1d;
+  color: white;
+  border: 1px solid var(--darkGrey);
+  padding: 10px;
+  font-size: 1em;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: white;
+  font-family: "Figtree", sans-serif;
+  font-weight: 100;
+}
+
 /* -----------------------BOOKING SECTION ------------------------*/
 
 /*  ----------------------------------MEDIA QUERIES---------------------------------- */

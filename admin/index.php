@@ -20,9 +20,9 @@
         $res = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($res);
 
-        $sql1 = "SELECT * FROM category";
-        $res1 = mysqli_query($conn, $sql);
-        $count1 = mysqli_num_rows($res);
+        $sql1 = "SELECT * FROM food";
+        $res1 = mysqli_query($conn, $sql1);
+        $count1 = mysqli_num_rows($res1);
         echo '
         <div class="categories card">
         <span>'.$count.'</span>
