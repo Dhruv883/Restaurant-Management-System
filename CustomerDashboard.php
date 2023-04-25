@@ -1,3 +1,8 @@
+<?php 
+  require('./database.php');
+  include('./userAuth.php'); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

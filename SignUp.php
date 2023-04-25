@@ -1,3 +1,53 @@
+<?php
+
+if (isset($_POST['submitbtn'])) {
+     
+      require 'database.php';
+     
+      $fname = $_POST['fname'];
+      $lname = $_POST['lname'];
+      $phonenum = $_POST['phonenum'];
+      $age = $_POST['age'];
+      $email = $_POST['email'];
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+      $cpassword = $_POST['cpassword'];
+
+      $exists = false;
+      $usercopy = "SELECT * FROM customer WHERE username='$username'";
+      if (mysqli_num_rows(mysqli_query($conn, $usercopy)) > 0) {
+        $exists = true;
+        echo "<script>alert('Username Already Exists!');</script>";
+      }
+      $emailcopy = "SELECT * FROM customer WHERE email='$email'";
+      if (mysqli_num_rows(mysqli_query($conn, $emailcopy)) > 0) {
+        $exists = true;
+        echo "<script>alert('Email Already Exists!');</script>";
+      }
+
+
+      if (!$exists) {
+
+       if($password != $cpassword ){
+            echo "<script>alert('Passwords are not same!');</script>";
+        }else{
+
+          $sql = "INSERT INTO customer (fname, lname, phonenum, age, email, username, password) VALUES ('$fname', '$lname', '$phonenum',  $age, '$email', '$username', '$password')";
+
+          $result = mysqli_query($conn, $sql);
+
+          if(!$result){
+          echo 'Failed to connect';
+          }else{
+            header("Location:http://localhost/Restaurant-Management-System/SignIn.php");
+          }
+
+        }
+      }
+}
+ 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
