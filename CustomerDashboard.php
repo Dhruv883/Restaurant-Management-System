@@ -32,10 +32,6 @@
         </div>
 
         <div>
-          <span><img src="images/user.svg" alt="" srcset="" /></span>
-          <span class="text">Profile</span>
-        </div>
-        <div>
           <span
             ><img src="images/shopping-bag-svgrepo-com.svg" alt="" srcset=""
           /></span>
@@ -60,7 +56,7 @@
           <span
             ><img src="images/logout-svgrepo-com.svg" alt="" srcset=""
           /></span>
-          <span class="text">Log Out</span>
+          <span class="text"><a href="logout.php">Log Out</a></span>
         </div>
       </div>
 
@@ -68,7 +64,7 @@
         <div class="header" id="header">
           <span>
             <span><img src="images/user.svg" alt="" srcset="" /></span>
-            <span>User Name</span>
+            <span><?php  echo $_SESSION['customer']?></span>
           </span>
         </div>
         <div class="content">

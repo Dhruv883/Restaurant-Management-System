@@ -1,7 +1,6 @@
 <?php 
   include('./partials-front/navbar.php');
 
- 
 ?>
 
 
