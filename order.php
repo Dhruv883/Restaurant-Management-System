@@ -1,12 +1,46 @@
 <?php
-include('./database.php');  
+  include('./database.php');  
+  // unset($_SESSION['orderid'] );
+  $_SESSION['orderid'] = 1;
+if(isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == 'remove'){
+  $id = $_GET['id'];
+  unset($_SESSION['cart'][$id]);
+  header("Location:http://localhost/Restaurant-Management-System/order.php");
+} 
 
-  if(isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == 'remove'){
-        $id = $_GET['id'];
-        unset($_SESSION['cart'][$id]);
-        header("Location:http://localhost/Restaurant-Management-System/order.php");
-      }
 
+if (isset($_POST['order'])) {
+    if (!isset($_SESSION['customer'])) {
+
+      header("Location:http://localhost/Restaurant-Management-System/SignIn.php");
+
+    }else{
+
+      $customer = $_SESSION['customer'];
+      $sql = "SELECT * FROM customer WHERE username = '$customer'";
+      $res = mysqli_query($conn , $sql);
+      $row = mysqli_fetch_assoc($res);
+      $cart = $_SESSION['cart'];
+      
+      foreach($cart as $key => $item) {
+        $food_name = $item['name'];
+        $food_price = $item['price'];
+        $food_qty = $_POST['qty'][$key];
+        $address = $_POST['address'];
+        $customer_name = $row['fname']." ".$row['lname'];
+        $customer_id = $row['customerid'];
+
+        $sql = "INSERT INTO orders (food_name, food_price, food_qty, address, customer_name, customer_id, status, time, order_id) VALUES ('$food_name', $food_price, $food_qty, '$address', '$customer_name', $customer_id, 'Active', CURRENT_TIMESTAMP(), ".$_SESSION['orderid'].")";
+        $res = mysqli_query($conn, $sql);
+      }  
+
+
+      $_SESSION['orderid']++;
+      unset($_SESSION['cart']);
+      // header("Location:http://localhost/Restaurant-Management-System/CustomerDashboard.php");
+    }
+   
+  }
 ?>
 
 
@@ -68,7 +102,7 @@ include('./database.php');
             <div class="foodprice">₹ '.$item['price'].'</div>
             <div class="foodqty">
             <span>Quantity:</span>
-            <input type="number" value="1" name="qty" min="1" />
+            <input type="number" value="1" name="qty['.$key.']" min="1" />
             </div>
             <div class="remove"><a href="order.php?id='.$key.'&action=remove">Remove</a></div>
             </div>
@@ -84,7 +118,7 @@ include('./database.php');
               name="address"
               id="address"
               placeholder="Address"
-              
+              required;
             ></textarea>
         </div>
         <div class="input submit">
