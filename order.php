@@ -37,9 +37,21 @@ include('./database.php');
         <span><a href="index.php#contactUs">Contact us</a></span>
       </div>
 
-      <div class="logsign">
-        <button><a href="SignIn.php">Register / Log-in</a></button>
-      </div>
+       <?php 
+        if (!isset($_SESSION['customer'])) {
+          echo '
+            <div class="logsign">
+              <button><a href="SignIn.php">Register / Log-in</a></button>
+            </div>
+          ';
+        }else{
+          echo '
+            <div class ="cartImg">
+              <a href="customerDashboard.php"><img src="./images/user.svg" alt="" srcset=""></a>
+            </div>
+          ';
+        }
+      ?>
     </nav>
 
     <main>
