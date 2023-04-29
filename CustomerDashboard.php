@@ -31,19 +31,26 @@
           </span>
         </div>
 
-        <div>
+        <div class="menu-item">
+          <a href="">
           <span
             ><img src="images/shopping-bag-svgrepo-com.svg" alt="" srcset=""
           /></span>
           <span class="text">Past Orders</span>
+           </a>
         </div>
-        <div>
+
+        <div class="menu-item">
+          <a href=""> 
           <span
             ><img src="images/order-food-svgrepo-com.svg" alt="" srcset=""
           /></span>
           <span class="text">Order Food</span>
+           </a>
         </div>
-        <div>
+
+        <div class="menu-item">
+          <a href="">
           <span
             ><img
               src="images/shopping-line-cart-svgrepo-com.svg"
@@ -51,12 +58,16 @@
               srcset=""
           /></span>
           <span class="text">Cart</span>
+           </a>
         </div>
-        <div>
+
+        <div class="menu-item">
+          <a href="logout.php">
           <span
             ><img src="images/logout-svgrepo-com.svg" alt="" srcset=""
           /></span>
-          <span class="text"><a href="logout.php">Log Out</a></span>
+          <span class="text">Log Out</span>
+        </a>
         </div>
       </div>
 

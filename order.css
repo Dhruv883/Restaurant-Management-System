@@ -150,7 +150,7 @@ textarea::placeholder {
 }
 
 .foodtitle {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .foodqty input[type="number"] {
@@ -163,6 +163,28 @@ textarea::placeholder {
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
+  gap: 3em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   gap: 1em;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.remove a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: black;
 }

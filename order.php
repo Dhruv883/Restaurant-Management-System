@@ -1,35 +1,18 @@
 <?php
-  include('./database.php');
-  if (isset($_GET['id'])) {
-    $food_id = $_GET['id'];
-    $sql = "SELECT * FROM food where food_id = '$food_id'";
-    $res = mysqli_query($conn , $sql);
-    $count = mysqli_num_rows($res);
-    if ($count == 1) {
-      $row = mysqli_fetch_assoc($res);
-
-      $title = $row['foodname'];
-      $price = $row['food_price'];
-      $img = $row['food_img'];
-
-    }else{
-      // header("Location:http://localhost/Restaurant-Management-System/Menu.php?id=1");
-    }
-  }
-
-  
-
-
-
-  // $max=sizeof($_SESSION['cart']);
-  // for($i=0; $i<$max; $i++) { 
-
-  // while (list ($key, $val) = each ($_SESSION['cart'][$i])) { 
-  // echo "$key -> $val ,"; 
-  // } 
-  // echo "<br>";
-  // } 
+include('./database.php');
+// session_unset();
 ?>
+
+<?php 
+
+  if(isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == 'remove'){
+        $id = $_GET['id'];
+        unset($_SESSION['cart'][$id]);
+        header("Location:http://localhost/Restaurant-Management-System/order.php");
+      }
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,29 +41,42 @@
         <button><a href="SignIn.php">Register / Log-in</a></button>
       </div>
     </nav>
+
     <main>
       <div class="title">Cart</div>
-      <form action="order.php" method = "post">
-      <div>
-        <div class="order-item">
-          <div class="foodimg"><img src="./images/food-img/burger.jpg" alt="" srcset=""></div>
-          <div class="items">
-            <div class="foodtitle">Farm Villa Pizza</div>
-            <div class="foodprice">₹ 200</div>
+      <form action="order.php" method = "POST">
+          <div class="list">
+      <?php 
+        if(isset($_SESSION['cart'])) {
+        $cart = $_SESSION['cart'];
+
+        foreach($cart as $key => $item) {
+            
+            echo '
+            <div class="order-item">
+            <div class="foodimg"><img src="./images/food-img/burger.jpg" alt="" srcset=""></div>
+            <div class="items">
+            <div class="foodtitle">'.$item['name'].'</div>
+            <div class="foodprice">₹ '.$item['price'].'</div>
             <div class="foodqty">
-              <div>Quantity:</div>
-              <input type="number" value="1" name="qty" min="1" />
+            <span>Quantity:</span>
+            <input type="number" value="1" name="qty" min="1" />
             </div>
-          </div>
-        </div>
-      </div>
-      <div>
+            <div class="remove"><a href="order.php?id='.$key.'&action=remove">Remove</a></div>
+            </div>
+            </div>
+            ';
+        }   
+    }
+    ?>
+    </div>
+      <div class="details">
        <div class="address input">
             <textarea
               name="address"
               id="address"
               placeholder="Address"
-              required
+              
             ></textarea>
         </div>
         <div class="input submit">

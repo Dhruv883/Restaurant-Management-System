@@ -24,9 +24,23 @@
         <span><a href="index.php#contactUs">Contact us</a></span>
       </div>
 
-      <div class="logsign">
-        <button><a href="SignIn.php">Register / Log-in</a></button>
-      </div>
+      <?php 
+        if (!isset($_SESSION['customer'])) {
+          echo '
+            <div class="logsign">
+              <button><a href="SignIn.php">Register / Log-in</a></button>
+            </div>
+          ';
+        }else{
+          echo '
+            <div class ="cartImg">
+              <a href="order.php"><img src="./images/shopping-line-cart-svgrepo-com.svg" alt="" srcset=""></a>
+            </div>
+          ';
+        }
+      ?>
+
+      
     </nav>
 
 </body>
