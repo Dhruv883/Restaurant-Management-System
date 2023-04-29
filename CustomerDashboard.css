@@ -42,6 +42,7 @@ main {
 }
 
 .text {
+  width: 140px;
   color: var(--light-yellow);
   font-size: 1.2em;
 }
@@ -147,4 +148,11 @@ main {
   .header {
     visibility: hidden;
   }
+}
+
+.menu-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
 }

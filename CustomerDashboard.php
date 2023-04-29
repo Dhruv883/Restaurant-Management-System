@@ -14,7 +14,7 @@
   </head>
   <body>
     <main>
-      <div class="sidebar close" id="sidebar">
+      <div class="sidebar" id="sidebar">
         <div class="hambtn">
           <img
             src="images/hamburger.svg"
@@ -36,12 +36,12 @@
           <span
             ><img src="images/shopping-bag-svgrepo-com.svg" alt="" srcset=""
           /></span>
-          <span class="text">Past Orders</span>
+          <span class="text">Order</span>
            </a>
         </div>
 
         <div class="menu-item">
-          <a href=""> 
+          <a href="Menu.php?id=1"> 
           <span
             ><img src="images/order-food-svgrepo-com.svg" alt="" srcset=""
           /></span>
@@ -50,7 +50,7 @@
         </div>
 
         <div class="menu-item">
-          <a href="">
+          <a href="Order.php">
           <span
             ><img
               src="images/shopping-line-cart-svgrepo-com.svg"
