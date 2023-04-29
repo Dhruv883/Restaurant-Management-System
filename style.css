@@ -80,7 +80,10 @@ nav {
 .cartImg img {
   width: 50px;
 }
+
 .cartImg {
+  display: flex;
+  gap: 1.5em;
   cursor: pointer;
 }
 

@@ -35,6 +35,7 @@
           echo '
             <div class ="cartImg">
               <a href="order.php"><img src="./images/shopping-line-cart-svgrepo-com.svg" alt="" srcset=""></a>
+              <a href="customerDashboard.php"><img src="./images/user.svg" alt="" srcset=""></a>
             </div>
           ';
         }

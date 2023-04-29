@@ -1,9 +1,5 @@
 <?php
-include('./database.php');
-// session_unset();
-?>
-
-<?php 
+include('./database.php');  
 
   if(isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == 'remove'){
         $id = $_GET['id'];
