@@ -3,6 +3,9 @@
   // echo $_SESSION['orderid'];  
   // unset($_SESSION['orderid'] );
   // $_SESSION['orderid'] = 1;
+  if (!isset($_SESSION['orderid'])) {
+    $_SESSION['orderid'] = 1;
+  }
 if(isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == 'remove'){
   $id = $_GET['id'];
   unset($_SESSION['cart'][$id]);

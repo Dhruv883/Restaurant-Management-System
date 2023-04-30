@@ -23,6 +23,15 @@
         $sql1 = "SELECT * FROM food";
         $res1 = mysqli_query($conn, $sql1);
         $count1 = mysqli_num_rows($res1);
+
+        $orders = 0;
+        $sql2 = "SELECT DISTINCT customer_id FROM orders";
+        $res2 = mysqli_query($conn, $sql2);
+        while ($row = mysqli_fetch_assoc($res2)) {
+          $query = "SELECT DISTINCT order_id FROM orders WHERE customer_id = $row[customer_id]";
+          $re  =mysqli_query($conn, $query);
+          $orders+= mysqli_num_rows($re);
+        }
         echo '
         <div class="categories card">
         <span>'.$count.'</span>
@@ -35,7 +44,7 @@
         </div>
         
         <div class="categories card">
-        <span>0</span>
+        <span>'.$orders.'</span>
         <span>Orders</span>
       </div>
       ';

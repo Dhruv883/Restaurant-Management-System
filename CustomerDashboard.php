@@ -99,6 +99,7 @@
               
               $orderQuery = "SELECT * FROM orders WHERE customer_id = $id AND order_id = $row[order_id]";
               $result = mysqli_query($conn, $orderQuery);
+              $total = 0;
               while ($order = mysqli_fetch_assoc($result)) {
                 
                 echo '
@@ -108,13 +109,14 @@
                 <div class="oqty">Qty: '.$order['food_qty'].'</div>
                 <div class="oprice">Rs '.$order['food_price'].'</div>
                 </div>';
+                $total += $order['food_price'];
                   
                 }
 
                 $order = mysqli_fetch_assoc(mysqli_query($conn, $orderQuery));
                 echo '
                    <div class="amount">
-                  <h1>Total : Rs 1234</h1>
+                  <h1>Total :₹ '.$total.'</h1>
                   <h1>'.$order['status'].'</h1>
                   </div>
 
