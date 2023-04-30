@@ -1,11 +1,7 @@
 <?php
   include('./database.php');
-  // echo $_SESSION['orderid'];  
-  // unset($_SESSION['orderid'] );
-  // $_SESSION['orderid'] = 1;
-  if (!isset($_SESSION['orderid'])) {
-    $_SESSION['orderid'] = 1;
-  }
+  // $_SESSION['orderid'] = 4 ;
+ 
 if(isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == 'remove'){
   $id = $_GET['id'];
   unset($_SESSION['cart'][$id]);
@@ -36,7 +32,10 @@ if (isset($_POST['order'])) {
 
         $sql = "INSERT INTO orders (food_name, food_price, food_qty, address, customer_name, customer_id, status, time, order_id) VALUES ('$food_name', $food_price, $food_qty, '$address', '$customer_name', $customer_id, 'Active', CURRENT_TIMESTAMP(), ".$_SESSION['orderid'].")";
         $res = mysqli_query($conn, $sql);
+
       }  
+      $sql1 = "INSERT INTO order_det (order_id, customer_id, status) VALUES (".$_SESSION['orderid']." , $customer_id, 'Active')";
+      $res = mysqli_query($conn, $sql1);
 
 
       $_SESSION['orderid']++;

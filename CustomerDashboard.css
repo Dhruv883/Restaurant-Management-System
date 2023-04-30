@@ -129,15 +129,16 @@ main {
 }
 
 .content {
-  padding: o 1em;
+  padding: 0 1em;
   display: flex;
   flex-direction: column;
   gap: 1em;
   flex-wrap: wrap;
-  width: 80vw;
+  width: 81vw;
 }
 
-.content h1 {
+.content h1,
+h2 {
   text-align: center;
   padding: 0 1em;
 }

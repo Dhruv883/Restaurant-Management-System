@@ -107,17 +107,18 @@
                 <div class="oimg"><img src="images/food-img/burger.jpg" alt="" srcset=""></div>
                 <div class="ofood">'.$order['food_name'].'</div>
                 <div class="oqty">Qty: '.$order['food_qty'].'</div>
-                <div class="oprice">Rs '.$order['food_price'].'</div>
+                <div class="oprice">₹ '.$order['food_price'].'</div>
                 </div>';
-                $total += $order['food_price'];
+                $total += $order['food_price']* $order['food_qty'];
                   
                 }
-
-                $order = mysqli_fetch_assoc(mysqli_query($conn, $orderQuery));
+                $query = "SELECT status from order_det WHERE customer_id = $id AND order_id = $row[order_id]";
+                $res1 = mysqli_query($conn, $query);
+                $order = mysqli_fetch_assoc($res1);
                 echo '
                    <div class="amount">
-                  <h1>Total :₹ '.$total.'</h1>
-                  <h1>'.$order['status'].'</h1>
+                  <h2>Total : ₹ '.$total.'</h2>
+                  <h2>'.$order['status'].'</h2>
                   </div>
 
 
