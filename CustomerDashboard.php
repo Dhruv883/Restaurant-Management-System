@@ -32,11 +32,11 @@
         </div>
 
         <div class="menu-item">
-          <a href="">
+          <a href="CustomerDashboard.php">
           <span
             ><img src="images/shopping-bag-svgrepo-com.svg" alt="" srcset=""
           /></span>
-          <span class="text">Order</span>
+          <span class="text">Orders</span>
            </a>
         </div>
 
@@ -79,12 +79,52 @@
           </span>
         </div>
         <div class="content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-          quam blanditiis possimus recusandae dolore et eos odit voluptates
-          perspiciatis saepe assumenda labore beatae quia, esse nemo modi dolor
-          quo dolorem sequi cum. Tenetur architecto vitae ullam dolorum
-          voluptatibus aliquid modi consectetur, illo fugiat magni omnis harum
-          quidem, et voluptatum vero.
+          <h1>Orders</h1>
+
+
+          <div class="orderlist">
+            <?php 
+
+            $customer  = $_SESSION['customer'];
+            $sql = "SELECT * FROM customer where username = '$customer'";
+            $res = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($res);
+
+            $id = $row['customerid'];
+
+            $sql = "SELECT DISTINCT order_id FROM orders WHERE customer_id = $id";
+            $res = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($res)) {
+              echo  '<div class="orderid">';
+              
+              $orderQuery = "SELECT * FROM orders WHERE customer_id = $id AND order_id = $row[order_id]";
+              $result = mysqli_query($conn, $orderQuery);
+              while ($order = mysqli_fetch_assoc($result)) {
+                
+                echo '
+                <div class="orderitem">
+                <div class="oimg"><img src="images/food-img/burger.jpg" alt="" srcset=""></div>
+                <div class="ofood">'.$order['food_name'].'</div>
+                <div class="oqty">Qty: '.$order['food_qty'].'</div>
+                <div class="oprice">Rs '.$order['food_price'].'</div>
+                </div>';
+                  
+                }
+
+                $order = mysqli_fetch_assoc(mysqli_query($conn, $orderQuery));
+                echo '
+                   <div class="amount">
+                  <h1>Total : Rs 1234</h1>
+                  <h1>'.$order['status'].'</h1>
+                  </div>
+
+
+              </div>';
+            }
+              
+              
+              ?>
+          </div>
         </div>
       </div>
     </main>

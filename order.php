@@ -1,7 +1,8 @@
 <?php
-  include('./database.php');  
+  include('./database.php');
+  // echo $_SESSION['orderid'];  
   // unset($_SESSION['orderid'] );
-  $_SESSION['orderid'] = 1;
+  // $_SESSION['orderid'] = 1;
 if(isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == 'remove'){
   $id = $_GET['id'];
   unset($_SESSION['cart'][$id]);
@@ -118,7 +119,7 @@ if (isset($_POST['order'])) {
               name="address"
               id="address"
               placeholder="Address"
-              required;
+              required
             ></textarea>
         </div>
         <div class="input submit">

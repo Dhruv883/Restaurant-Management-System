@@ -16,6 +16,9 @@ a {
   text-decoration: none;
   color: var(--light-yellow);
 }
+body {
+  overflow-x: hidden;
+}
 
 main {
   width: 100vw;
@@ -39,6 +42,7 @@ main {
   position: absolute;
   top: 5px;
   left: 250px;
+  visibility: hidden;
 }
 
 .text {
@@ -127,7 +131,66 @@ main {
 .content {
   padding: 1em;
   display: flex;
+  flex-direction: column;
+  gap: 1em;
   flex-wrap: wrap;
+  width: 80vw;
+}
+
+.content h1 {
+  padding: 0 1em;
+}
+
+.menu-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.orderlist {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.orderid {
+  /* border: 1px solid red; */
+  border-bottom: 2px solid black;
+}
+
+.orderitem {
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  gap: 2em;
+  font-size: 1.5em;
+}
+.oid {
+  width: 50px;
+}
+.oimg {
+  width: 125px;
+}
+.oimg img {
+  width: 100px;
+  border-radius: 5px;
+}
+.ofood {
+  width: 200px;
+}
+.oqty {
+  width: 75px;
+}
+.oprice {
+  width: 75px;
+}
+
+.amount {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
 @media (max-width: 768px) {
@@ -148,11 +211,4 @@ main {
   .header {
     visibility: hidden;
   }
-}
-
-.menu-item a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
 }
