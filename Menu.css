@@ -210,6 +210,11 @@ hr {
   border-radius: 10px;
 }
 
+.foodimg img:hover {
+  transition: transform 300ms ease-in;
+  transform: scale(1.1);
+}
+
 .fooditem .info .foodtitle {
   font-size: 2em;
 }

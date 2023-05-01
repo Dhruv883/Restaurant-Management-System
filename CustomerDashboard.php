@@ -104,7 +104,7 @@
                 
                 echo '
                 <div class="orderitem">
-                <div class="oimg"><img src="images/food-img/burger.jpg" alt="" srcset=""></div>
+                <div class="oimg"><img src="images/food-img/'.$order['food_name'].'.jpg" alt="" srcset=""></div>
                 <div class="ofood">'.$order['food_name'].'</div>
                 <div class="oqty">Qty: '.$order['food_qty'].'</div>
                 <div class="oprice">₹ '.$order['food_price'].'</div>
