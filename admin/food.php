@@ -41,7 +41,7 @@
                               <div class="foodcat">'.$catname.'</div>
                               <div class="foodprice">₹ '.$price.'</div>
                               <div class="btns2"> 
-                                    <div class="update"><a href=""><button>Update Food</button></a></div>
+                                    <div class="update"><a href="updateFood.php?id='.$id.'"><button>Update Food</button></a></div>
                                     <div class="delete"><a href="deleteFood.php?id='.$id.'&img='.$img.'"><button>Delete Food</button></a></div>
                               </div>
                               </div>

@@ -71,6 +71,13 @@
             />
             </div>
 
+            <div class="name input">
+            <input
+              type="hidden"
+              
+            />
+            </div>
+
             <div class="">
             <label class="custom-file-upload">
             <input type="file"  name="catimg"/>
@@ -78,6 +85,12 @@
             </label>
             </div>
 
+            <div class="name input">
+            <input
+              type="hidden"
+              
+            />
+            </div>
             <input type="number" name="catid" id="catid" class="hidden" value="<?php echo $_GET['id']; ?>">
             <div class="addbtn"><input type="submit" value="ADD" name="submit" /></div>
       </form>
