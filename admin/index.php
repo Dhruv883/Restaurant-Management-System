@@ -40,7 +40,7 @@
         
         <div class="categories card">
         <span>'.$orders.'</span>
-        <span>Orders</span>
+        <span>Active Orders</span>
       </div>
       ';
       ?>

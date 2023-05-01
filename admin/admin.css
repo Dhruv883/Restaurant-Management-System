@@ -276,3 +276,66 @@ input[type="file"] {
 .hidden {
   display: none;
 }
+
+.ord {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 2px solid black;
+  padding: 10px 0px;
+}
+
+.order_id {
+  width: 150px;
+  font-size: 1.5em;
+}
+
+.customer_name {
+  width: 200px;
+  font-size: 1.5em;
+}
+.customer_id {
+  width: 160px;
+  font-size: 1.5em;
+}
+
+.order-items-list {
+  width: 300px;
+  font-size: 1.2em;
+}
+.totalPrice {
+  width: 125px;
+  font-size: 1.5em;
+}
+.order_status {
+  width: 150px;
+  font-size: 1.5em;
+}
+.order_update button {
+  width: 125px;
+  padding: 10px;
+  font-size: 1.25em;
+  border: none;
+  background-color: black;
+  color: var(--light-yellow);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.p {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+select {
+  border: none;
+  outline: none;
+  padding: 0.5em 0.25em;
+  border-radius: 3px;
+  font-size: 1.25em;
+  background-color: black;
+  color: var(--light-yellow);
+  cursor: pointer;
+}
