@@ -185,12 +185,29 @@ textarea::placeholder {
   overflow: scroll;
 }
 
-.bookbtn button {
-  border: none;
-  font-size: 1.25em;
-  padding: 0.5em;
-  width: 30vw;
+.input input[type="submit"] {
+  background: var(--light-yellow) !important;
+  color: black;
   cursor: pointer;
-  font-family: "Figtree", sans-serif;
-  background-color: var(--light-yellow);
+  font-size: 1.25em;
+  padding: 0.65em;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-yellow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-yellow);
 }

@@ -547,3 +547,20 @@ textarea::placeholder {
     width: 30vw;
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-yellow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-yellow);
+}

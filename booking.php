@@ -1,5 +1,22 @@
 <?php 
   include('./partials-front/navbar.php');
+  if (isset($_POST['submit'])) {
+    if (!isset($_SESSION['customer'])) {
+      header("Location:http://localhost/Restaurant-Management-System/SignIn.php");
+    }else{
+      $bookingname = $_POST['bookingname'];
+      $bookingphone = $_POST['bookingphone'];
+      $bookingdate = $_POST['bookingdate'];
+      $bookingtime = $_POST['bookingtime'];
+      $bookingmessage = $_POST['bookingmessage'];
+      $bookingspace = $_POST['bookingspace'];
+
+      $sql = "INSERT INTO reservation (full_name, phone_num, date, time, message, dining_space) VALUES (
+        '$bookingname', '$bookingphone', $bookingdate, '$bookingtime', '$bookingmessage', $bookingspace)";
+       $result = mysqli_query($conn, $sql);
+      
+    }
+  }
 ?>
 
 
@@ -16,7 +33,7 @@
     <div class="booking" id="booking">
       <div class="bookingImg"><img src="images/restaurant.jpg" alt="" /></div>
       <div class="bookingForm">
-        <form action="" class="bookingForm">
+        <form action="booking.php" method="post" class="bookingForm">
           <div class="title">Online Reservation</div>
 
           <div class="name input">
@@ -49,7 +66,7 @@
             />
           </div>
 
-          <div class="time input">
+          <div class="time input" id="date">
             <select name="bookingtime" id="bookingtime" required>
               <option value="none" selected disabled hidden>
                 Select a Time
@@ -81,8 +98,8 @@
           </div>
 
           <div class="people input">
-            <select name="bookingtime" id="bookingtime" required>
-              <option value="none" selected disabled hidden>
+            <select name="bookingspace" id="bookingspace" required>
+              <option value="" required>
                 Select Your Dining Space
               </option>
               <option value="2">2 People</option>
@@ -93,9 +110,13 @@
             </select>
           </div>
 
-          <div class="bookbtn"><button type="submit">Book Now</button></div>
+          <div class="bookbtn input submit">
+                <input type="submit" class="submit" value="Book Now" name="submit" />
+          </div>
         </form>
       </div>
     </div>
+
+
   </body>
 </html>

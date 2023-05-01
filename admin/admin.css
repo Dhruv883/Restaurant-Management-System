@@ -396,3 +396,20 @@ select {
 .fu2 {
   padding: 16px 226px 16px 16px;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-yellow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-yellow);
+}
