@@ -92,7 +92,7 @@
 
             $id = $row['customerid'];
 
-            $sql = "SELECT DISTINCT order_id FROM orders WHERE customer_id = $id";
+            $sql = "SELECT DISTINCT order_id FROM orders WHERE customer_id = $id ORDER BY order_id DESC";
             $res = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_assoc($res)) {
               echo  '<div class="orderid">';
@@ -110,6 +110,7 @@
                 <div class="oprice">₹ '.$order['food_price'].'</div>
                 </div>';
                 $total += $order['food_price']* $order['food_qty'];
+                $time = $order['time'];
                   
                 }
                 $query = "SELECT status from order_det WHERE customer_id = $id AND order_id = $row[order_id]";
@@ -118,6 +119,7 @@
                 echo '
                    <div class="amount">
                   <h2>Total : ₹ '.$total.'</h2>
+                  <h2>Ordered At : '.$time.'</h2>
                   <h2>'.$order['status'].'</h2>
                   </div>
 

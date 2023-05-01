@@ -30,7 +30,7 @@ if (isset($_POST['order'])) {
         $customer_name = $row['fname']." ".$row['lname'];
         $customer_id = $row['customerid'];
 
-        $sql = "INSERT INTO orders (food_name, food_price, food_qty, address, customer_name, customer_id, status, time, order_id) VALUES ('$food_name', $food_price, $food_qty, '$address', '$customer_name', $customer_id, 'Active', CURRENT_TIMESTAMP(), ".$_SESSION['orderid'].")";
+        $sql = "INSERT INTO orders (food_name, food_price, food_qty, address, customer_name, customer_id, time, order_id) VALUES ('$food_name', $food_price, $food_qty, '$address', '$customer_name', $customer_id,  CURRENT_TIMESTAMP(), ".$_SESSION['orderid'].")";
         $res = mysqli_query($conn, $sql);
 
       }  
