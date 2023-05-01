@@ -6,7 +6,7 @@
             $id = $_GET['id'];
             $img = $_GET['img'];
             if($img != ""){
-                  $path = "../images/category/$img";
+                  $path = "../images/category-img/$img";
                   $remove = unlink($path);
             }
             $sql = "DELETE FROM category WHERE catid = $id";
