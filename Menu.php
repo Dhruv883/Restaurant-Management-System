@@ -105,7 +105,7 @@
            
             echo '
             <div class="fooditem">
-            <div class="foodimg"><img src="images/food-img/burger.jpg" alt="" srcset=""></div>
+            <div class="foodimg"><img src="images/food-img/'.$row['food_img'].'" alt="" srcset=""></div>
             <div class="info">
             <div class="foodtitle">'.$row['foodname'].'</div>
             <div class="foodprice">₹ '.$row['food_price'].' </div>

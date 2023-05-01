@@ -361,6 +361,7 @@ select {
 .foodimg img {
   border-radius: 5px;
   width: 125px;
+  max-height: 125px;
 }
 
 .foodname {
@@ -390,4 +391,8 @@ select {
   align-items: center;
   gap: 1em;
   width: 300px;
+}
+
+.fu2 {
+  padding: 16px 226px 16px 16px;
 }

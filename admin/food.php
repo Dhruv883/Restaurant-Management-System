@@ -36,13 +36,13 @@
                               echo '
                               <div class="foodcard">
                               <div class="foodid">'.$id.'</div>
-                              <div class="foodimg"><img src="../images/food-img/burger.jpg" alt="'.$name.'" srcset=""></div>
+                              <div class="foodimg"><img src="../images/food-img/'.$img.'" alt="'.$name.'" srcset=""></div>
                               <div class="foodname">'.$name.'</div>
                               <div class="foodcat">'.$catname.'</div>
                               <div class="foodprice">₹ '.$price.'</div>
                               <div class="btns2"> 
                                     <div class="update"><a href=""><button>Update Food</button></a></div>
-                                    <div class="delete"><a href=""><button>Delete Food</button></a></div>
+                                    <div class="delete"><a href="deleteFood.php?id='.$id.'&img='.$img.'"><button>Delete Food</button></a></div>
                               </div>
                               </div>
                               ';

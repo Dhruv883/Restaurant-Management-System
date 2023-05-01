@@ -1,44 +1,55 @@
 <?php 
       include('./menu.php');
 
-      // if (isset($_POST['submit'])) {
+      if (isset($_POST['submit'])) {
            
-      //       $foodname = $_POST['foodname'];
-      //       $foodimg = "";
-      //       if(isset($_FILES['foodimg']['name'])){
+            $foodname = $_POST['foodname'];
+            $foodprice = $_POST['foodprice'];
+            $foodcategory = $_POST['foodcategory'];
+            $foodimg = "";
+            $catsql = "SELECT * FROM category WHERE catname = '$foodcategory'";
+            $res = mysqli_query($conn, $catsql);
+            if (mysqli_num_rows($res)<=0) {
+                   echo "<script>alert('Category Doesnt Exist!');</script>";
+            }else{
+                  $row = mysqli_fetch_assoc($res);
+                  $catid = $row['catid'];
 
-      //             $foodimg = $_FILES['foodimg']['name'];
-                  
-      //             if($foodimg != ""){
+                  if(isset($_FILES['foodimg']['name'])){
                         
-      //                   $ext = end(explode('.', $foodimg));
-      //                   $foodimg = $foodname.'.'.$ext;
-
-      //                   $src_path = $_FILES['foodimg']['tmp_name'];
-      //                   $dest_path = "../images/food-img/".$foodimg;
-
-      //                   $upload = move_uploaded_file($src_path, $dest_path);
-
-      //                   if(!$upload){
-      //                         echo "<script>alert('Couldn't upload image');</script>";
-                        
-      //                   }
-      //             }
-
+                  $foodimg = $_FILES['foodimg']['name'];
                   
-      //       }
+                  if($foodimg != ""){
+                        
+                        $ext = end(explode('.', $foodimg));
+                        $foodimg = $foodname.'.'.$ext;
+                        
+                        $src_path = $_FILES['foodimg']['tmp_name'];
+                        $dest_path = "../images/food-img/".$foodimg;
+                        
+                        $upload = move_uploaded_file($src_path, $dest_path);
 
-      //       $sql = "INSERT INTO food (catname, catimg) VALUES ('$catname' , '$catimg')";
+                        if(!$upload){
+                              echo "<script>alert('Couldn't upload image');</script>";
+                              
+                        }
+                  }
+                  
+                  
+                  }
 
-      //       $result = mysqli_query($conn, $sql);
+                  $sql = "INSERT INTO food (foodname, food_cat_id, food_price, food_img) VALUES ('$foodname', '$catid', '$foodprice', '$foodimg')";
 
-      //       if(!$result){
-      //             echo 'Failed to add category';
-      //       }
-      //       else{
-      //             header("Location:http://localhost/Restaurant-Management-System/admin/category.php");
-      // }
-      // }
+                  $result = mysqli_query($conn, $sql);
+            
+                  if(!$result){
+                              echo 'Failed to add category';
+                  }
+                  else{
+                              header("Location:http://localhost/Restaurant-Management-System/admin/food.php");
+                  }
+            }
+      }
 
       
 ?>
@@ -66,15 +77,46 @@
               required
             />
             </div>
+            <div class="name input">
+            <input
+              type="number"
+              name="foodprice"
+              id="foodprice"
+              placeholder="Food Price"
+              required
+            />
+            </div>
+            <div class="name input">
+            <input
+              type="text"
+              name="foodcategory"
+              id="foodcategory"
+              placeholder="Food Category"
+              required
+            />
+            </div>
+            <div class="name input">
+            <input
+              type="hidden"
+              
+            />
+            </div>
 
             <div class="">
-            <label class="custom-file-upload">
+            <label class="custom-file-upload fu2">
             <input type="file"  name="foodimg"/>
             Upload Food Image
             </label>
             </div>
 
-            <div class="addbtn"><input type="submit" value="ADD" name="submit" /></div>
+            <div class="name input">
+            <input
+              type="hidden"
+              
+            />
+            </div>
+
+            <div class="addbtn "><input type="submit" value="ADD" name="submit" /></div>
       </form>
       </div>
       </div>
