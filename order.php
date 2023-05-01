@@ -99,7 +99,7 @@ if (isset($_POST['order'])) {
             
             echo '
             <div class="order-item">
-            <div class="foodimg"><img src="./images/food-img/burger.jpg" alt="" srcset=""></div>
+            <div class="foodimg"><img src="./images/food-img/'.$item['name'].'.jpg" alt="" srcset=""></div>
             <div class="items">
             <div class="foodtitle">'.$item['name'].'</div>
             <div class="foodprice">₹ '.$item['price'].'</div>

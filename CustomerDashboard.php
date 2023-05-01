@@ -119,7 +119,6 @@
                 echo '
                    <div class="amount">
                   <h2>Total : ₹ '.$total.'</h2>
-                  <h2>Ordered At : '.$time.'</h2>
                   <h2>'.$order['status'].'</h2>
                   </div>
 
