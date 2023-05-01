@@ -23,6 +23,10 @@
         $sql1 = "SELECT * FROM food";
         $res1 = mysqli_query($conn, $sql1);
         $count1 = mysqli_num_rows($res1);
+
+        $sql2 = "SELECT * FROM order_det WHERE status ='Active'";
+        $res2 = mysqli_query($conn, $sql2);
+        $orders = mysqli_num_rows($res2);
         echo '
         <div class="categories card">
         <span>'.$count.'</span>
@@ -35,8 +39,8 @@
         </div>
         
         <div class="categories card">
-        <span>0</span>
-        <span>Orders</span>
+        <span>'.$orders.'</span>
+        <span>Active Orders</span>
       </div>
       ';
       ?>

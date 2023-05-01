@@ -77,6 +77,16 @@ nav {
   transform: scale(1.05);
 }
 
+.cartImg img {
+  width: 50px;
+}
+
+.cartImg {
+  display: flex;
+  gap: 1.5em;
+  cursor: pointer;
+}
+
 .menu {
   display: flex;
   align-items: center;

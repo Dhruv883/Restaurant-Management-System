@@ -23,8 +23,6 @@
                               echo "<script>alert('Couldn't upload image');</script>";
                         
                         }
-                  }else  {
-                        $catimg = "Default.jpg";
                   }
 
                   

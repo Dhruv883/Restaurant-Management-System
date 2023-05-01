@@ -1,7 +1,5 @@
 <?php 
   include('./partials-front/navbar.php');
-
- 
 ?>
 
 
@@ -65,6 +63,31 @@
 
     </div> 
 
+     <?php 
+    
+      if(isset($_GET['fid']) && isset($_GET['action']) && $_GET['action'] == 'add'){
+        $id = $_GET['fid'];
+        $sql = "SELECT * FROM food WHERE food_id = '$id'";
+        $res = mysqli_query($conn, $sql);
+        if(mysqli_num_rows($res) == 1){
+          $row = mysqli_fetch_assoc($res);
+        
+          if(isset($_SESSION['cart'])){
+            $cart = $_SESSION['cart'];
+          }else{
+            $cart = array();
+          }
+          $cart[] = array(
+            'id' => $row['food_id'],
+            'name' => $row['foodname'],
+            'price' => $row['food_price'],
+            'img' => $row['food_img']
+          );
+          $_SESSION['cart'] = $cart;
+        }
+      }
+  ?>
+
     <div class="menuitems">
       <?php 
 
@@ -82,11 +105,11 @@
            
             echo '
             <div class="fooditem">
-            <div class="foodimg"><img src="images/food-img/burger.jpg" alt="" srcset=""></div>
+            <div class="foodimg"><img src="images/food-img/'.$row['food_img'].'" alt="" srcset=""></div>
             <div class="info">
             <div class="foodtitle">'.$row['foodname'].'</div>
             <div class="foodprice">₹ '.$row['food_price'].' </div>
-            <div class="addtocart"><button>Add</button></div>
+            <div class="addtocart"><a href="Menu.php?id='.$id.'&fid='.$row['food_id'].'&action=add"><button>Add</button></a></div>
             </div>
             </div>
             ';
@@ -96,3 +119,5 @@
     </div>
   </body>
 </html>
+
+
