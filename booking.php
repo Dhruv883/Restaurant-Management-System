@@ -11,12 +11,27 @@
       $bookingmessage = $_POST['bookingmessage'];
       $bookingspace = $_POST['bookingspace'];
 
-      $sql = "INSERT INTO reservation (full_name, phone_num, date, time, message, dining_space) VALUES (
-        '$bookingname', '$bookingphone', $bookingdate, '$bookingtime', '$bookingmessage', $bookingspace)";
-       $result = mysqli_query($conn, $sql);
+        if(isset($_SESSION['table'])){
+            $table = $_SESSION['table'];
+          }else{
+            $table = array();
+          }
+          $table[] = array(
+            'bookingname' => $bookingname,
+            'bookingphone' => $bookingphone,
+            'bookingdate' => $bookingdate,
+            'bookingtime' => $bookingtime,
+            'bookingmessage' => $bookingmessage,
+            'bookingspace' => $bookingspace,
+          );
+          $_SESSION['table'] = $table;
+        
+          header("Location:http://localhost/Restaurant-Management-System/payment.php");
       
     }
   }
+
+   
 ?>
 
 
