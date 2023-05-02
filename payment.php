@@ -1,21 +1,26 @@
 <?php 
   require('./database.php');
   if (isset($_POST['submit'])) {
-    $table = $_SESSION['table'];
+    if (isset($_SESSION['table'])) {
+      $table = $_SESSION['table'];
   
-    foreach($table as $key => $item) {
-      $bookingname = $item['bookingname'];
-      $bookingphone = $item['bookingphone'];
-      $bookingdate = $item['bookingdate'];
-      $bookingtime = $item['bookingtime'];
-      $bookingmessage = $item['bookingmessage'];
-      $bookingspace = $item['bookingspace'];
-      } 
+      foreach($table as $key => $item) {
+        $bookingname = $item['bookingname'];
+        $bookingphone = $item['bookingphone'];
+        $bookingdate = $item['bookingdate'];
+        $bookingtime = $item['bookingtime'];
+        $bookingmessage = $item['bookingmessage'];
+        $bookingspace = $item['bookingspace'];
+        } 
    
-      $sql = "INSERT INTO reservation (full_name, phone_num, date, time, message, dining_space) VALUES (
-        '$bookingname', '$bookingphone', $bookingdate, '$bookingtime', '$bookingmessage', $bookingspace)";
-      $result = mysqli_query($conn, $sql);
-      header("Location:http://localhost/Restaurant-Management-System/customerDashboard.php");
+        $sql = "INSERT INTO reservation (full_name, phone_num, date, time, message, dining_space) VALUES (
+          '$bookingname', '$bookingphone', $bookingdate, '$bookingtime', '$bookingmessage', $bookingspace)";
+        $result = mysqli_query($conn, $sql);
+        unset($_SESSION['table']);
+        header("Location:http://localhost/Restaurant-Management-System/customerDashboard.php");
+      }
+
+     
   }
 ?>
 
