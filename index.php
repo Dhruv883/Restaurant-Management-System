@@ -46,25 +46,15 @@
           <h2>We Provide Good Quality Food!</h2>
           <div>
             <p>
-              Once upon a time, in a bustling city, there were young chefs named
-              Dhruv, Om And Manas who had a passion for cooking. They dreamed of
-              opening their own restaurant where they could share their love for
-              food with the world.After years of hard work and dedication, Their
-              dream finally came true.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum doloribus, officiis, libero excepturi distinctio dicta voluptatem et explicabo est ratione facere nostrum esse nihil! A, aspernatur officia! Ullam odit natus quis minima! Magnam obcaecati, hic distinctio dolorum voluptatum quae adipisci!
             </p>
             <br />
             <p>
-              "DOM's Kitchen", opened its doors in a small corner of the city.
-              They put all their heart and soul into creating a warm and
-              inviting atmosphere where customers could relax and enjoy a
-              delicious meal.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo assumenda porro aut nesciunt veniam ut? Eos atque molestiae asperiores numquam at, laborum earum debitis ex nulla quia voluptate magni nisi.
             </p>
             <br />
             <p>
-              At "DOM's" Kitchen, the focus was on using only the freshest and
-              highest quality ingredients. They believed that the key to
-              creating a great meal was in the ingredients themselves, and so
-              they sourced their produce from local farms and markets.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, ducimus itaque? Explicabo vitae recusandae autem enim accusamus eveniet sint? Harum voluptas aperiam, laboriosam corrupti perferendis ad iure quis culpa sit.
             </p>
           </div>
         </div>
